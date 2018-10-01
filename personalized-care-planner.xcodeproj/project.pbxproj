@@ -14,6 +14,9 @@
 		0682AD4C2162554200E21140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD4A2162554200E21140 /* LaunchScreen.storyboard */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
 		0682AD622162554300E21140 /* personalized_care_plannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD612162554300E21140 /* personalized_care_plannerUITests.swift */; };
+		5E51057E64E50E4D1C520C44 /* Pods_personalized_care_plannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC2B2A1F6E9DF54569D2A8E /* Pods_personalized_care_plannerTests.framework */; };
+		6777E5D05C1AC2FEDBE597A6 /* Pods_personalized_care_planner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F862B3B762367E6203A92F /* Pods_personalized_care_planner.framework */; };
+		7498EBAF60D5DB4F1ABC8CEE /* Pods_personalized_care_plannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EB655EA4161FAED16B1E27 /* Pods_personalized_care_plannerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		0682AD3E2162554200E21140 /* personalized-care-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personalized-care-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD412162554200E21140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0682AD432162554200E21140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		0682AD5D2162554300E21140 /* personalized-care-plannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "personalized-care-plannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD612162554300E21140 /* personalized_care_plannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalized_care_plannerUITests.swift; sourceTree = "<group>"; };
 		0682AD632162554300E21140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CC2B2A1F6E9DF54569D2A8E /* Pods_personalized_care_plannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_personalized_care_plannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238E5126F524239AE13FE2D1 /* Pods-personalized-care-plannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CA3B27108403E4C685948F0 /* Pods-personalized-care-plannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerUITests/Pods-personalized-care-plannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83EB655EA4161FAED16B1E27 /* Pods_personalized_care_plannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_personalized_care_plannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69958CD5A4743CB29A15068 /* Pods-personalized-care-planner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-planner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F862B3B762367E6203A92F /* Pods_personalized_care_planner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_personalized_care_planner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA83B0BCA87181FCAE7344DC /* Pods-personalized-care-planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-planner.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner.release.xcconfig"; sourceTree = "<group>"; };
+		CF628E604154F46AFC5B70DE /* Pods-personalized-care-plannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerUITests/Pods-personalized-care-plannerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6777E5D05C1AC2FEDBE597A6 /* Pods_personalized_care_planner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E51057E64E50E4D1C520C44 /* Pods_personalized_care_plannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7498EBAF60D5DB4F1ABC8CEE /* Pods_personalized_care_plannerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				0682AD552162554300E21140 /* personalized-care-plannerTests */,
 				0682AD602162554300E21140 /* personalized-care-plannerUITests */,
 				0682AD3F2162554200E21140 /* Products */,
+				9B5FC05ED81A8429A7DB2C8F /* Pods */,
+				57127285E984CCA140AC597F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = "personalized-care-plannerUITests";
 			sourceTree = "<group>";
 		};
+		57127285E984CCA140AC597F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9F862B3B762367E6203A92F /* Pods_personalized_care_planner.framework */,
+				0CC2B2A1F6E9DF54569D2A8E /* Pods_personalized_care_plannerTests.framework */,
+				83EB655EA4161FAED16B1E27 /* Pods_personalized_care_plannerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B5FC05ED81A8429A7DB2C8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A69958CD5A4743CB29A15068 /* Pods-personalized-care-planner.debug.xcconfig */,
+				BA83B0BCA87181FCAE7344DC /* Pods-personalized-care-planner.release.xcconfig */,
+				238E5126F524239AE13FE2D1 /* Pods-personalized-care-plannerTests.debug.xcconfig */,
+				04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */,
+				4CA3B27108403E4C685948F0 /* Pods-personalized-care-plannerUITests.debug.xcconfig */,
+				CF628E604154F46AFC5B70DE /* Pods-personalized-care-plannerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0682AD662162554300E21140 /* Build configuration list for PBXNativeTarget "personalized-care-planner" */;
 			buildPhases = (
+				CF7A28B4D7D57456A41319B8 /* [CP] Check Pods Manifest.lock */,
 				0682AD3A2162554200E21140 /* Sources */,
 				0682AD3B2162554200E21140 /* Frameworks */,
 				0682AD3C2162554200E21140 /* Resources */,
+				2EA6BC7A4254FD72D8CA3DBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0682AD692162554300E21140 /* Build configuration list for PBXNativeTarget "personalized-care-plannerTests" */;
 			buildPhases = (
+				529C51EA183182F46BF913C4 /* [CP] Check Pods Manifest.lock */,
 				0682AD4E2162554300E21140 /* Sources */,
 				0682AD4F2162554300E21140 /* Frameworks */,
 				0682AD502162554300E21140 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0682AD6C2162554300E21140 /* Build configuration list for PBXNativeTarget "personalized-care-plannerUITests" */;
 			buildPhases = (
+				9FBD764075F98707ECF20CF3 /* [CP] Check Pods Manifest.lock */,
 				0682AD592162554300E21140 /* Sources */,
 				0682AD5A2162554300E21140 /* Frameworks */,
 				0682AD5B2162554300E21140 /* Resources */,
@@ -253,6 +297,93 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EA6BC7A4254FD72D8CA3DBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		529C51EA183182F46BF913C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-personalized-care-plannerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBD764075F98707ECF20CF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-personalized-care-plannerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF7A28B4D7D57456A41319B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-personalized-care-planner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0682AD3A2162554200E21140 /* Sources */ = {
@@ -424,6 +555,7 @@
 		};
 		0682AD672162554300E21140 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A69958CD5A4743CB29A15068 /* Pods-personalized-care-planner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +571,7 @@
 		};
 		0682AD682162554300E21140 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA83B0BCA87181FCAE7344DC /* Pods-personalized-care-planner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +587,7 @@
 		};
 		0682AD6A2162554300E21140 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238E5126F524239AE13FE2D1 /* Pods-personalized-care-plannerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +605,7 @@
 		};
 		0682AD6B2162554300E21140 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +623,7 @@
 		};
 		0682AD6D2162554300E21140 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CA3B27108403E4C685948F0 /* Pods-personalized-care-plannerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +640,7 @@
 		};
 		0682AD6E2162554300E21140 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF628E604154F46AFC5B70DE /* Pods-personalized-care-plannerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
