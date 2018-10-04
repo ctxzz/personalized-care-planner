@@ -1,0 +1,34 @@
+digraph {
+    device[label="M_Device"];
+    group[label="M_Group"];
+    organazation[label="M_Organazation"];
+    person[label="M_Person"];
+    user[label="M_User"];
+    userType[label="C_UserType"];
+    poster[label="M_Poster"];
+    template[label="M_Template"];
+    category[label="C_Category"];
+    tag[label="M_Tag"];
+
+    group -> organazation;
+    user -> userType;
+    poster -> person;
+    poster -> template;
+    template -> category;
+    tag -> person;
+    tag -> user;
+    tag -> poster;
+
+    group_person[label="Group_Person"];
+    user_group[label="User_Group"];
+    device_group[label="Device_Group"];
+    tag_category[label="Tag_Category"];
+    group_person -> group;
+    group_person -> person;
+    user_group -> user;
+    user_group -> group;
+    device_group -> device;
+    device_group -> group;
+    tag_category -> tag;
+    tag_category -> category;
+}
