@@ -15,9 +15,6 @@
 		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
 		06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E321774E8A00CCAA0B /* model-relation-v1.dot */; };
 		06F095E821774EB800CCAA0B /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095EC21774EB800CCAA0B /* FontAwesomeKit.framework */; };
-		06F095E921774EB800CCAA0B /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095ED21774EB800CCAA0B /* Material.framework */; };
-		06F095EA21774EB800CCAA0B /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095EE21774EB800CCAA0B /* Motion.framework */; };
-		06F095EB21774EB800CCAA0B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095EF21774EB800CCAA0B /* ObjectMapper.framework */; };
 		06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F321774EC600CCAA0B /* Realm.framework */; };
 		06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F421774EC600CCAA0B /* RealmSwift.framework */; };
 		06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F521774EC600CCAA0B /* SwiftyJSON.framework */; };
@@ -25,6 +22,7 @@
 		06F095FB217751D300CCAA0B /* SplitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F095FA217751D300CCAA0B /* SplitDetailViewController.swift */; };
 		5E51057E64E50E4D1C520C44 /* Pods_personalized_care_plannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC2B2A1F6E9DF54569D2A8E /* Pods_personalized_care_plannerTests.framework */; };
 		7498EBAF60D5DB4F1ABC8CEE /* Pods_personalized_care_plannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EB655EA4161FAED16B1E27 /* Pods_personalized_care_plannerUITests.framework */; };
+		FD6C8D89A911707EA5016DF4 /* Pods_personalized_care_planner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F862B3B762367E6203A92F /* Pods_personalized_care_planner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,9 +85,7 @@
 				06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */,
 				06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */,
 				06F095E821774EB800CCAA0B /* FontAwesomeKit.framework in Frameworks */,
-				06F095E921774EB800CCAA0B /* Material.framework in Frameworks */,
-				06F095EA21774EB800CCAA0B /* Motion.framework in Frameworks */,
-				06F095EB21774EB800CCAA0B /* ObjectMapper.framework in Frameworks */,
+				FD6C8D89A911707EA5016DF4 /* Pods_personalized_care_planner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0682AD662162554300E21140 /* Build configuration list for PBXNativeTarget "personalized-care-planner" */;
 			buildPhases = (
+				4AC2C27B491DA5AA9E7F4CC9 /* [CP] Check Pods Manifest.lock */,
 				CF7A28B4D7D57456A41319B8 /* I */,
 				0682AD3A2162554200E21140 /* Sources */,
 				0682AD3B2162554200E21140 /* Frameworks */,
@@ -288,20 +285,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Kirilab;
 				TargetAttributes = {
 					0682AD3D2162554200E21140 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					0682AD512162554300E21140 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0682AD3D2162554200E21140;
 					};
 					0682AD5C2162554300E21140 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0682AD3D2162554200E21140;
 					};
@@ -363,9 +363,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
-				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -373,9 +370,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -383,6 +377,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AC2C27B491DA5AA9E7F4CC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-personalized-care-planner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		529C51EA183182F46BF913C4 /* [CP] Check Pods Manifest.lock */ = {
@@ -499,6 +511,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -506,6 +519,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -533,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -556,6 +570,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -563,6 +578,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -584,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -600,11 +616,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JPWY7NPT2H;
 				INFOPLIST_FILE = "personalized-care-planner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -617,11 +633,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JPWY7NPT2H;
 				INFOPLIST_FILE = "personalized-care-planner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -638,7 +654,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-plannerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/personalized-care-planner.app/personalized-care-planner";
 			};
@@ -656,7 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-plannerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/personalized-care-planner.app/personalized-care-planner";
 			};
@@ -673,7 +689,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-plannerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "personalized-care-planner";
 			};
@@ -690,7 +706,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-plannerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "personalized-care-planner";
 			};

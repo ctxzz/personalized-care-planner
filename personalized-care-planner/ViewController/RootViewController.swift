@@ -15,9 +15,9 @@ class RootViewController: UISplitViewController, UISplitViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let masterVC = SplitMasterViewController()
-        masterNav.addChildViewController(masterVC)
+        masterNav.addChild(masterVC)
         let detailVC = SplitDetailViewController()
-        detailNav.addChildViewController(detailVC)
+        detailNav.addChild(detailVC)
         viewControllers = [masterNav, detailNav]
     }
 

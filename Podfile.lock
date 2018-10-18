@@ -20,14 +20,6 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.1):
     - FontAwesomeKit/Core
-  - Material (2.16.4):
-    - Material/Core (= 2.16.4)
-  - Material/Core (2.16.4):
-    - Motion (~> 1.4.3)
-  - Motion (1.4.3):
-    - Motion/Core (= 1.4.3)
-  - Motion/Core (1.4.3)
-  - ObjectMapper (3.3.0)
   - Realm (3.10.0):
     - Realm/Headers (= 3.10.0)
   - Realm/Headers (3.10.0)
@@ -37,30 +29,22 @@ PODS:
 
 DEPENDENCIES:
   - FontAwesomeKit (~> 2.2.1)
-  - Material (~> 2.16.4)
-  - ObjectMapper (~> 3.3.0)
   - RealmSwift (~> 3.10.0)
   - SwiftyJSON (~> 4.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FontAwesomeKit
-    - Material
-    - Motion
-    - ObjectMapper
     - Realm
     - RealmSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
-  Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
-  Motion: 153ba49692997888556c7a95207278a8b1f8be95
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
   RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 3aa43e67331f4b3c87dcfc08d69ae4194176d47f
+PODFILE CHECKSUM: 182c77ce81b03b43ef16f35e10f0705c6878fd52
 
 COCOAPODS: 1.5.3
