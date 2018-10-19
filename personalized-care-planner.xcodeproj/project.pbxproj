@@ -11,6 +11,10 @@
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
 		0682AD622162554300E21140 /* personalized_care_plannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD612162554300E21140 /* personalized_care_plannerUITests.swift */; };
+		06B35E1E217A265300641545 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableViewCell.swift */; };
+		06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */; };
+		06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E21217A373B00641545 /* TabBarGraphViewController.swift */; };
+		06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */; };
 		06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F095E021774E8A00CCAA0B /* RootViewController.swift */; };
 		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
 		06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E321774E8A00CCAA0B /* model-relation-v1.dot */; };
@@ -54,6 +58,10 @@
 		0682AD5D2162554300E21140 /* personalized-care-plannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "personalized-care-plannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD612162554300E21140 /* personalized_care_plannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalized_care_plannerUITests.swift; sourceTree = "<group>"; };
 		0682AD632162554300E21140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B35E1D217A265300641545 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
+		06B35E21217A373B00641545 /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
+		06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStaticsViewController.swift; sourceTree = "<group>"; };
 		06F095E021774E8A00CCAA0B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "model-relation-v1.pdf"; sourceTree = "<group>"; };
 		06F095E321774E8A00CCAA0B /* model-relation-v1.dot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "model-relation-v1.dot"; sourceTree = "<group>"; };
@@ -167,6 +175,9 @@
 				06F095E021774E8A00CCAA0B /* RootViewController.swift */,
 				06F095F621774EF100CCAA0B /* SplitMasterViewController.swift */,
 				06F095FA217751D300CCAA0B /* SplitDetailViewController.swift */,
+				06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */,
+				06B35E21217A373B00641545 /* TabBarGraphViewController.swift */,
+				06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 		06F095E421774E8A00CCAA0B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06B35E1D217A265300641545 /* PersonTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,8 +472,12 @@
 			files = (
 				06F095FB217751D300CCAA0B /* SplitDetailViewController.swift in Sources */,
 				06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */,
+				06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */,
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
+				06B35E1E217A265300641545 /* PersonTableViewCell.swift in Sources */,
 				06F095F721774EF100CCAA0B /* SplitMasterViewController.swift in Sources */,
+				06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */,
+				06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

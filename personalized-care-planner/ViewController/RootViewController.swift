@@ -19,6 +19,22 @@ class RootViewController: UISplitViewController, UISplitViewControllerDelegate {
         let detailVC = SplitDetailViewController()
         detailNav.addChild(detailVC)
         viewControllers = [masterNav, detailNav]
+        
+        var tabViewControllers: [UIViewController] = []
+
+        let tabBarPDFVC = TabBarPDFViewController()
+        tabBarPDFVC.tabBarItem = UITabBarItem.init(title: "PDF", image: nil, tag: 1)
+        tabViewControllers.append(tabBarPDFVC)
+
+        let tabBarGraphVC = TabBarGraphViewController()
+        tabBarGraphVC.tabBarItem = UITabBarItem.init(title: "Graph", image: nil, tag: 2)
+        tabViewControllers.append(tabBarGraphVC)
+
+        let tabBarStaticsVC = TabBarStaticsViewController()
+        tabBarStaticsVC.tabBarItem = UITabBarItem.init(title: "Statics", image: nil, tag: 3)
+        tabViewControllers.append(tabBarStaticsVC)
+        
+        detailVC.setViewControllers(tabViewControllers, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
