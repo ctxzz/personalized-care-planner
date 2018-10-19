@@ -13,6 +13,9 @@ class SplitMasterViewController: UITableViewController, UISplitViewControllerDel
     var collapseDetailViewController = true
     var names = ["person1", "person2","person3"]
     
+    var rightNavigationItems: [UIBarButtonItem]!
+    var leftNavigationItems: [UIBarButtonItem]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .singleLine
@@ -21,6 +24,15 @@ class SplitMasterViewController: UITableViewController, UISplitViewControllerDel
         title = "master"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "hello", style: .plain, target: self, action: #selector(hello))
         
+        /// LEFT Navigation
+        leftNavigationItems = []
+        navigationItem.leftBarButtonItems = leftNavigationItems
+        
+        /// RIGHT Navigation
+        rightNavigationItems = []
+        let searchButton = UIBarButtonItem.init(barButtonSystemItem: .search, target: self, action: nil)
+        rightNavigationItems.append(searchButton)
+        navigationItem.rightBarButtonItems = rightNavigationItems
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

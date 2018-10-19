@@ -10,13 +10,27 @@ import Foundation
 import UIKit
 
 class SplitDetailViewController: UITabBarController, UISplitViewControllerDelegate {
+    var rightNavigationItems: [UIBarButtonItem]!
+    var leftNavigationItems: [UIBarButtonItem]!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "bye", style: .plain, target: self, action: #selector(bye))
         title = "Detail"
         view.backgroundColor = .white
-        splitViewController?.delegate = self        
+        splitViewController?.delegate = self
+        
+        /// LEFT Navigation
+        leftNavigationItems = []
+        navigationItem.leftBarButtonItems = leftNavigationItems
+        
+        /// RIGHT Navigation
+        rightNavigationItems = []
+        let actionButton = UIBarButtonItem.init(barButtonSystemItem: .action, target: self, action: nil)
+        rightNavigationItems.append(actionButton)
+        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: nil)
+        rightNavigationItems.append(addButton)
+        navigationItem.rightBarButtonItems = rightNavigationItems
     }
     
     func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {

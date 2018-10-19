@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+    
 class PersonTableViewCell: UITableViewCell {
     var name: String!
     var photo: UIImage?
@@ -18,15 +18,12 @@ class PersonTableViewCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         backgroundColor = .gray
         name = ""
         photo = nil
         updateDate = Date.init()
-        
         
     }
 }
