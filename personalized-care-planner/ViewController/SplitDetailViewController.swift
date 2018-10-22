@@ -31,6 +31,23 @@ class SplitDetailViewController: UITabBarController, UISplitViewControllerDelega
         let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: nil)
         rightNavigationItems.append(addButton)
         navigationItem.rightBarButtonItems = rightNavigationItems
+        
+        /// bottom Tab Item
+        var tabViewControllers: [UIViewController] = []
+        /// TabBar PDF
+        let tabBarPDFVC = TabBarPDFViewController()
+        tabBarPDFVC.tabBarItem = UITabBarItem.init(title: "PDF", image: nil, tag: 1)
+        tabViewControllers.append(tabBarPDFVC)
+        /// TabBar Graoh
+        let tabBarGraphVC = TabBarGraphViewController()
+        tabBarGraphVC.tabBarItem = UITabBarItem.init(title: "Graph", image: nil, tag: 2)
+        tabViewControllers.append(tabBarGraphVC)
+        /// TabBar Statics
+        let tabBarStaticsVC = TabBarStaticsViewController()
+        tabBarStaticsVC.tabBarItem = UITabBarItem.init(title: "Statics", image: nil, tag: 3)
+        tabViewControllers.append(tabBarStaticsVC)
+        
+        self.setViewControllers(tabViewControllers, animated: true)
     }
     
     func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {

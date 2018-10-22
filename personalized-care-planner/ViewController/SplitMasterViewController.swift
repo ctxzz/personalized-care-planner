@@ -47,11 +47,11 @@ class SplitMasterViewController: UITableViewController, UISplitViewControllerDel
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailVC = SplitDetailViewController()
+        let detailNav = UINavigationController.init(rootViewController: SplitDetailViewController())
         if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
-            self.showDetailViewController(detailVC, sender: names[indexPath.row])
+            self.showDetailViewController(detailNav, sender: names[indexPath.row])
         } else {
-            self.show(detailVC, sender: names[indexPath.row])
+            self.show(detailNav, sender: names[indexPath.row])
         }
     }
     
