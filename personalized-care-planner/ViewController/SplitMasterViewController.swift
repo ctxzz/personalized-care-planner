@@ -8,22 +8,31 @@
 
 import Foundation
 import UIKit
+import Material
 
-class SplitMasterViewController: UITableViewController, UISplitViewControllerDelegate {
-    var collapseDetailViewController = true
-    var names = ["person1", "person2","person3"]
-    
+class SplitMasterViewController: UIViewController {
     var rightNavigationItems: [UIBarButtonItem]!
     var leftNavigationItems: [UIBarButtonItem]!
     
+    internal var tableView: PersonTableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorStyle = .singleLine
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        splitViewController?.delegate = self
         title = "master"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "hello", style: .plain, target: self, action: #selector(hello))
-        
+        prepareNavigationBar()
+        prepareTableView()
+
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        tableView.reloadData()
+    }
+    
+}
+
+extension SplitMasterViewController {
+    internal func prepareNavigationBar() {
         /// LEFT Navigation
         leftNavigationItems = []
         navigationItem.leftBarButtonItems = leftNavigationItems
@@ -35,31 +44,13 @@ class SplitMasterViewController: UITableViewController, UISplitViewControllerDel
         navigationItem.rightBarButtonItems = rightNavigationItems
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+    internal func prepareTableView() {
+        tableView = PersonTableView()
+        view.layout(tableView).edges()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = names[indexPath.row]
-        cell.accessoryType = .disclosureIndicator
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailNav = UINavigationController.init(rootViewController: SplitDetailViewController())
-        if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
-            self.showDetailViewController(detailNav, sender: names[indexPath.row])
-        } else {
-            self.show(detailNav, sender: names[indexPath.row])
-        }
-    }
-    
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        return collapseDetailViewController
-    }
-    
-    @objc func hello() {
-        print("hello")
+    internal func reloadData() {
+        let dataSourceItems = [DataSourceItem]()
+        tableView.dataSourceItems = dataSourceItems
     }
 }

@@ -8,43 +8,54 @@
 
 import UIKit
 
-class RootViewController: UISplitViewController, UISplitViewControllerDelegate {
-    let masterNav = UINavigationController()
-    let detailNav = UINavigationController()
+class RootViewController: UISplitViewController {
+    var masterVC: SplitMasterViewController!
+    var masterNavC: UINavigationController!
+    var detailVC: SplitDetailViewController!
+    var detailNavC: UINavigationController!
+    
+    func initializer() {
+        masterVC = SplitMasterViewController()
+        masterNavC = UINavigationController.init(rootViewController: masterVC)
+        detailVC = SplitDetailViewController()
+        detailNavC = UINavigationController.init(rootViewController: detailVC)
+        viewControllers = [masterNavC, detailNavC]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self
         
-        /// master
-        let masterVC = SplitMasterViewController()
-        masterNav.addChild(masterVC)
-        
-        /// detail
-        let detailVC = SplitDetailViewController()
-        detailNav.addChild(detailVC)
-        
-        viewControllers = [masterNav, detailNav]
+        NotificationCenter.default.addObserver(self, selector: #selector(updateDetailView), name: Notification.Name.init("RootVC"), object: nil)
 
-//        var tabViewControllers: [UIViewController] = []
-//        /// TabBar PDF
-//        let tabBarPDFVC = TabBarPDFViewController()
-//        tabBarPDFVC.tabBarItem = UITabBarItem.init(title: "PDF", image: nil, tag: 1)
-//        tabViewControllers.append(tabBarPDFVC)
-//        /// TabBar Graoh
-//        let tabBarGraphVC = TabBarGraphViewController()
-//        tabBarGraphVC.tabBarItem = UITabBarItem.init(title: "Graph", image: nil, tag: 2)
-//        tabViewControllers.append(tabBarGraphVC)
-//        /// TabBar Statics
-//        let tabBarStaticsVC = TabBarStaticsViewController()
-//        tabBarStaticsVC.tabBarItem = UITabBarItem.init(title: "Statics", image: nil, tag: 3)
-//        tabViewControllers.append(tabBarStaticsVC)
-//        
-//        detailVC.setViewControllers(tabViewControllers, animated: true)
     }
 
+    @objc func updateDetailView() {
+//        guard let item = {}
+        let detailVC = SplitDetailViewController()
+        let detailNavC = UINavigationController.init(rootViewController: detailVC)
+        
+        splitViewController?.showDetailViewController(detailNavC, sender: self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
 
+extension RootViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
+        print("detail")
+        return true
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, show vc: UIViewController, sender: Any?) -> Bool {
+        print("master")
+        return true
+    }
+}

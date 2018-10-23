@@ -9,7 +9,9 @@ target 'personalized-care-planner' do
   pod 'RealmSwift', '~> 3.10.0'
 #  pod 'ObjectMapper', '~> 3.3.0'
   pod 'FontAwesomeKit', '~> 2.2.1'
-  
+  pod 'Material', '~> 2.16.4'
+  pod 'Graph', '~> 2.2.2'
+
   # Pods for personalized-care-planner
 
   target 'personalized-care-plannerTests' do

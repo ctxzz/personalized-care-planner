@@ -11,7 +11,10 @@
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
 		0682AD622162554300E21140 /* personalized_care_plannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD612162554300E21140 /* personalized_care_plannerUITests.swift */; };
-		06B35E1E217A265300641545 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableViewCell.swift */; };
+		0682D89C217F3C5F00A02AAF /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89B217F3C5F00A02AAF /* Material.framework */; };
+		0682D89E217F3C5F00A02AAF /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89D217F3C5F00A02AAF /* Motion.framework */; };
+		0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89F217F54EA00A02AAF /* Graph.framework */; };
+		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
 		06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */; };
 		06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E21217A373B00641545 /* TabBarGraphViewController.swift */; };
 		06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */; };
@@ -58,7 +61,10 @@
 		0682AD5D2162554300E21140 /* personalized-care-plannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "personalized-care-plannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD612162554300E21140 /* personalized_care_plannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalized_care_plannerUITests.swift; sourceTree = "<group>"; };
 		0682AD632162554300E21140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06B35E1D217A265300641545 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		0682D89B217F3C5F00A02AAF /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0682D89D217F3C5F00A02AAF /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
 		06B35E21217A373B00641545 /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
 		06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStaticsViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */,
+				0682D89C217F3C5F00A02AAF /* Material.framework in Frameworks */,
+				0682D89E217F3C5F00A02AAF /* Motion.framework in Frameworks */,
 				06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */,
 				06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */,
 				06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */,
@@ -194,7 +203,7 @@
 		06F095E421774E8A00CCAA0B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				06B35E1D217A265300641545 /* PersonTableViewCell.swift */,
+				06B35E1D217A265300641545 /* PersonTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +211,9 @@
 		57127285E984CCA140AC597F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0682D89F217F54EA00A02AAF /* Graph.framework */,
+				0682D89B217F3C5F00A02AAF /* Material.framework */,
+				0682D89D217F3C5F00A02AAF /* Motion.framework */,
 				06F095F321774EC600CCAA0B /* Realm.framework */,
 				06F095F421774EC600CCAA0B /* RealmSwift.framework */,
 				06F095F521774EC600CCAA0B /* SwiftyJSON.framework */,
@@ -375,6 +387,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Graph/Graph.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -382,6 +397,9 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Graph.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -474,7 +492,7 @@
 				06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */,
 				06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */,
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
-				06B35E1E217A265300641545 /* PersonTableViewCell.swift in Sources */,
+				06B35E1E217A265300641545 /* PersonTableView.swift in Sources */,
 				06F095F721774EF100CCAA0B /* SplitMasterViewController.swift in Sources */,
 				06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */,
 				06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */,

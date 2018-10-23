@@ -8,30 +8,40 @@
 
 import Foundation
 import UIKit
+import Material
 
-class SplitDetailViewController: UITabBarController, UISplitViewControllerDelegate {
+class SplitDetailViewController: UITabBarController {
     var rightNavigationItems: [UIBarButtonItem]!
     var leftNavigationItems: [UIBarButtonItem]!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Detail"
+        title = "detail"
         view.backgroundColor = .white
-        splitViewController?.delegate = self
         
+        prepareNavigationBar()
+        prepareTabView()
+    }
+}
+
+extension SplitDetailViewController {
+    internal func prepareNavigationBar() {
         /// LEFT Navigation
         leftNavigationItems = []
         navigationItem.leftBarButtonItems = leftNavigationItems
         
         /// RIGHT Navigation
         rightNavigationItems = []
-        let actionButton = UIBarButtonItem.init(barButtonSystemItem: .action, target: self, action: nil)
-        rightNavigationItems.append(actionButton)
+        let moreButton = UIBarButtonItem.init(image: Icon.cm.moreHorizontal, style: .plain, target: self, action: nil)
+        rightNavigationItems.append(moreButton)
+        let printButton = UIBarButtonItem.init(image: Icon.cm.image, style: .plain, target: self, action: nil)
+        rightNavigationItems.append(printButton)
         let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: nil)
         rightNavigationItems.append(addButton)
         navigationItem.rightBarButtonItems = rightNavigationItems
-        
+    }
+    
+    internal func prepareTabView() {
         /// bottom Tab Item
         var tabViewControllers: [UIViewController] = []
         /// TabBar PDF
@@ -47,15 +57,6 @@ class SplitDetailViewController: UITabBarController, UISplitViewControllerDelega
         tabBarStaticsVC.tabBarItem = UITabBarItem.init(title: "Statics", image: nil, tag: 3)
         tabViewControllers.append(tabBarStaticsVC)
         
-        self.setViewControllers(tabViewControllers, animated: true)
-    }
-    
-    func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
-        title = "\(sender!)"
-        return true
-    }
-    
-    @objc func bye() {
-        print("bye")
+        self.setViewControllers(tabViewControllers, animated: false)
     }
 }
