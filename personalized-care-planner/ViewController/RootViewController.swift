@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Material
 
 class RootViewController: UISplitViewController {
+    var fabMenuC: PersonTableFABMenuViewController!
     var masterVC: SplitMasterViewController!
     var masterNavC: UINavigationController!
     var detailVC: SplitDetailViewController!
@@ -16,7 +18,9 @@ class RootViewController: UISplitViewController {
     
     func initializer() {
         masterVC = SplitMasterViewController()
-        masterNavC = UINavigationController.init(rootViewController: masterVC)
+        fabMenuC = PersonTableFABMenuViewController.init(rootViewController: masterVC)
+        masterNavC = UINavigationController.init(rootViewController: fabMenuC)
+        
         detailVC = SplitDetailViewController()
         detailNavC = UINavigationController.init(rootViewController: detailVC)
         viewControllers = [masterNavC, detailNavC]

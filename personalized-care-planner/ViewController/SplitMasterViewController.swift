@@ -9,17 +9,14 @@
 import Foundation
 import UIKit
 import Material
+import Motion
 
 class SplitMasterViewController: UIViewController {
-    var rightNavigationItems: [UIBarButtonItem]!
-    var leftNavigationItems: [UIBarButtonItem]!
-    
     internal var tableView: PersonTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "master"
-        prepareNavigationBar()
         prepareTableView()
 
     }
@@ -28,24 +25,9 @@ class SplitMasterViewController: UIViewController {
         super.viewWillLayoutSubviews()
         tableView.reloadData()
     }
-    
 }
 
 extension SplitMasterViewController {
-    internal func prepareNavigationBar() {
-        /// LEFT Navigation
-        leftNavigationItems = []
-        let settingButton = UIBarButtonItem.init(barButtonSystemItem: .edit, target: self, action: nil)
-        leftNavigationItems.append(settingButton)
-        navigationItem.leftBarButtonItems = leftNavigationItems
-        
-        /// RIGHT Navigation
-        rightNavigationItems = []
-        let searchButton = UIBarButtonItem.init(barButtonSystemItem: .search, target: self, action: nil)
-        rightNavigationItems.append(searchButton)
-        navigationItem.rightBarButtonItems = rightNavigationItems
-    }
-    
     internal func prepareTableView() {
         tableView = PersonTableView()
         view.layout(tableView).edges()
