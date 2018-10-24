@@ -14,6 +14,7 @@
 		0682D89C217F3C5F00A02AAF /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89B217F3C5F00A02AAF /* Material.framework */; };
 		0682D89E217F3C5F00A02AAF /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89D217F3C5F00A02AAF /* Motion.framework */; };
 		0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89F217F54EA00A02AAF /* Graph.framework */; };
+		0682D8A221808C7A00A02AAF /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
 		06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */; };
 		06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E21217A373B00641545 /* TabBarGraphViewController.swift */; };
@@ -21,7 +22,6 @@
 		06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F095E021774E8A00CCAA0B /* RootViewController.swift */; };
 		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
 		06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E321774E8A00CCAA0B /* model-relation-v1.dot */; };
-		06F095E821774EB800CCAA0B /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095EC21774EB800CCAA0B /* FontAwesomeKit.framework */; };
 		06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F321774EC600CCAA0B /* Realm.framework */; };
 		06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F421774EC600CCAA0B /* RealmSwift.framework */; };
 		06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F521774EC600CCAA0B /* SwiftyJSON.framework */; };
@@ -64,6 +64,7 @@
 		0682D89B217F3C5F00A02AAF /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D89D217F3C5F00A02AAF /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
 		06B35E21217A373B00641545 /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
@@ -95,13 +96,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0682D8A221808C7A00A02AAF /* FontAwesome_swift.framework in Frameworks */,
 				0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */,
 				0682D89C217F3C5F00A02AAF /* Material.framework in Frameworks */,
 				0682D89E217F3C5F00A02AAF /* Motion.framework in Frameworks */,
 				06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */,
 				06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */,
 				06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */,
-				06F095E821774EB800CCAA0B /* FontAwesomeKit.framework in Frameworks */,
 				FD6C8D89A911707EA5016DF4 /* Pods_personalized_care_planner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +212,7 @@
 		57127285E984CCA140AC597F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */,
 				0682D89F217F54EA00A02AAF /* Graph.framework */,
 				0682D89B217F3C5F00A02AAF /* Material.framework */,
 				0682D89D217F3C5F00A02AAF /* Motion.framework */,
@@ -386,7 +388,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-personalized-care-planner/Pods-personalized-care-planner-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Graph/Graph.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
@@ -396,7 +398,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Graph.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",

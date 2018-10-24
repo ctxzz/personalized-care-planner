@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Material
+import FontAwesome_swift
 
 class PersonTableView: TableView {
     var selectedIndex: Int?
@@ -47,9 +48,9 @@ extension PersonTableView: TableViewDataSource, TableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        
         cell.textLabel?.text = "test"
-        cell.imageView?.image = nil
+        cell.textLabel?.fontSize = 20
+        cell.imageView?.image = UIImage.fontAwesomeIcon(name: .userCircle, style: .solid, textColor: .lightGray, size: CGSize.init(width: 50, height: 50))
         cell.detailTextLabel?.text = "detail"
         cell.dividerColor = Color.grey.lighten2
         

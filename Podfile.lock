@@ -1,25 +1,5 @@
 PODS:
-  - FontAwesomeKit (2.2.1):
-    - FontAwesomeKit/Core (= 2.2.1)
-    - FontAwesomeKit/FontAwesome (= 2.2.1)
-    - FontAwesomeKit/FoundationIcons (= 2.2.1)
-    - FontAwesomeKit/IonIcons (= 2.2.1)
-    - FontAwesomeKit/Material (= 2.2.1)
-    - FontAwesomeKit/Octicons (= 2.2.1)
-    - FontAwesomeKit/Zocial (= 2.2.1)
-  - FontAwesomeKit/Core (2.2.1)
-  - FontAwesomeKit/FontAwesome (2.2.1):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/FoundationIcons (2.2.1):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/IonIcons (2.2.1):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/Material (2.2.1):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/Octicons (2.2.1):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/Zocial (2.2.1):
-    - FontAwesomeKit/Core
+  - FontAwesome.swift (1.4.5)
   - Graph (2.2.2)
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
@@ -36,7 +16,7 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
-  - FontAwesomeKit (~> 2.2.1)
+  - FontAwesome.swift (~> 1.4.5)
   - Graph (~> 2.2.2)
   - Material (~> 2.16.4)
   - RealmSwift (~> 3.10.0)
@@ -44,7 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FontAwesomeKit
+    - FontAwesome.swift
     - Graph
     - Material
     - Motion
@@ -53,7 +33,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  FontAwesome.swift: a351dbb86b9fcec9aad6bce2fdd5b95e9a7b8828
   Graph: 7bb540efc73635f727126db6236598aa472be086
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
@@ -61,6 +41,6 @@ SPEC CHECKSUMS:
   RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 111f418a17978c4b3954c9622f6eb10f0dc391e5
+PODFILE CHECKSUM: 47fc4a4d9ae0168b883b48b243618c1e3d89fa07
 
 COCOAPODS: 1.5.3

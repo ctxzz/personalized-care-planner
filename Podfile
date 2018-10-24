@@ -8,10 +8,10 @@ target 'personalized-care-planner' do
   pod 'SwiftyJSON', '~> 4.2.0'
   pod 'RealmSwift', '~> 3.10.0'
 #  pod 'ObjectMapper', '~> 3.3.0'
-  pod 'FontAwesomeKit', '~> 2.2.1'
   pod 'Material', '~> 2.16.4'
   pod 'Graph', '~> 2.2.2'
-
+  pod 'FontAwesome.swift', '~> 1.4.5 '
+  
   # Pods for personalized-care-planner
 
   target 'personalized-care-plannerTests' do

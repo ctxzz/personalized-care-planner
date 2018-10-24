@@ -35,6 +35,8 @@ extension SplitMasterViewController {
     internal func prepareNavigationBar() {
         /// LEFT Navigation
         leftNavigationItems = []
+        let settingButton = UIBarButtonItem.init(barButtonSystemItem: .edit, target: self, action: nil)
+        leftNavigationItems.append(settingButton)
         navigationItem.leftBarButtonItems = leftNavigationItems
         
         /// RIGHT Navigation
