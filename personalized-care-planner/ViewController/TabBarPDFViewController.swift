@@ -12,16 +12,17 @@ import PDFKit
 
 class TabBarPDFViewController: UIViewController {
     var pdfView: PDFView!
-    var tabItemHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PDF"
-        
+        title = "PDF"        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if let pdfView = self.view.subviews.first as? PDFView  {
+            pdfView.removeFromSuperview()
+        }
         preparePDFView()
     }
     
