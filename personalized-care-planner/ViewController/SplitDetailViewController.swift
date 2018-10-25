@@ -47,6 +47,7 @@ extension SplitDetailViewController {
         /// TabBar PDF
         let tabBarPDFVC = TabBarPDFViewController()
         tabBarPDFVC.tabBarItem = UITabBarItem.init(title: "PDF", image: nil, tag: 1)
+        tabBarPDFVC.tabItemHeight = self.tabBar.layer.bounds.height
         tabViewControllers.append(tabBarPDFVC)
         /// TabBar Graoh
         let tabBarGraphVC = TabBarGraphViewController()
