@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		06451585218231AD00860F83 /* self-alone-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06451584218231AD00860F83 /* self-alone-sheet.pdf */; };
 		06451586218231B100860F83 /* self-alone-sheet.pdf in Sources */ = {isa = PBXBuildFile; fileRef = 06451584218231AD00860F83 /* self-alone-sheet.pdf */; };
+		0645158C2182E56400860F83 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
+		0645158D2182E5DC00860F83 /* index.html in Sources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
+		0645158F2182E75B00860F83 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
+		064515902182E76100860F83 /* d3.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		0682AD422162554200E21140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD412162554200E21140 /* AppDelegate.swift */; };
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
@@ -55,6 +59,8 @@
 /* Begin PBXFileReference section */
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		06451584218231AD00860F83 /* self-alone-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "self-alone-sheet.pdf"; sourceTree = "<group>"; };
+		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		0682AD3E2162554200E21140 /* personalized-care-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personalized-care-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD412162554200E21140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0682AD482162554200E21140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +145,31 @@
 			path = Asset;
 			sourceTree = "<group>";
 		};
+		064515882182E52E00860F83 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				064515892182E52E00860F83 /* js */,
+				0645158A2182E52E00860F83 /* html */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		064515892182E52E00860F83 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				0645158E2182E75B00860F83 /* d3.min.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		0645158A2182E52E00860F83 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				0645158B2182E56400860F83 /* index.html */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
 		0682AD352162554200E21140 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +195,7 @@
 		0682AD402162554200E21140 /* personalized-care-planner */ = {
 			isa = PBXGroup;
 			children = (
+				064515882182E52E00860F83 /* WebView */,
 				0645157F21821D1300860F83 /* Asset */,
 				06F095E121774E8A00CCAA0B /* Model */,
 				06F095E421774E8A00CCAA0B /* View */,
@@ -373,8 +405,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0645158C2182E56400860F83 /* index.html in Resources */,
 				06451585218231AD00860F83 /* self-alone-sheet.pdf in Resources */,
 				06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */,
+				0645158F2182E75B00860F83 /* d3.min.js in Resources */,
 				0682AD492162554200E21140 /* Assets.xcassets in Resources */,
 				06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */,
 			);
@@ -506,6 +540,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064515902182E76100860F83 /* d3.min.js in Sources */,
+				0645158D2182E5DC00860F83 /* index.html in Sources */,
 				06451586218231B100860F83 /* self-alone-sheet.pdf in Sources */,
 				06F095FB217751D300CCAA0B /* SplitDetailViewController.swift in Sources */,
 				06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */,
