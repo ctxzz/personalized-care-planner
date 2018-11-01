@@ -1,41 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>GraphView</title>
-    <script type="text/javascript" src="d3.min.js"></script>
-    <style>
-        .links line {
-            stroke: #aaa;
-        }
-        .nodes circle {
-            pointer-events: all;
-            stroke: none;
-            stroke-width: 40px;
-        }
-    </style>
-</head>
-<body>
-    <svg width="700" height="640"></svg>
-    
-    <script type="text/javascript">
-        var svg = d3.select("svg"),
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+                <title>GraphView</title>
+                <script type="text/javascript" src="d3.min.js"></script>
+                <script>
+                    var graph = {
+                        "nodes": [
+                                  {"id": "Self", "group": 1},
+                                  {"id": "Personality", "group": 2},
+                                  {"id": "Relation", "group": 3},
+                                  {"id": "Function", "group": 4},
+                                  {"id": "Story", "group": 5},
+                                  {"id": "State", "group": 6},
+                                  {"id": "Goal", "group": 7},
+                                  {"id": "Object", "group": 3},
+                                  {"id": "Person", "group": 3},
+                                  {"id": "Event", "group": 3},
+                                  {"id": "Input", "group": 4},
+                                  {"id": "Output", "group": 4},
+                                  {"id": "20", "group": 5},
+                                  {"id": "40", "group": 5},
+                                  {"id": "60", "group": 5},
+                                  {"id": "80", "group": 5},
+                                  {"id": "Positive", "group": 6},
+                                  {"id": "Negative", "group": 6},
+                                  {"id": "f1", "group": 7},
+                                  {"id": "f2", "group": 7},
+                                  {"id": "f3", "group": 7},
+                                  {"id": "f4", "group": 7},
+                                  {"id": "f5", "group": 7},
+                                  {"id": "Sound", "group": 4},
+                                  {"id": "Taste", "group": 4},
+                                  {"id": "Vision", "group": 4},
+                                  {"id": "Tactile", "group": 4},
+                                  {"id": "Speech", "group": 4},
+                                  {"id": "Expression", "group": 4},
+                                  {"id": "Action", "group": 4},
+                                  {"id": "Other", "group": 4},
+                                  ],
+                                  "links": [
+                                            {"source": "Self", "target": "Personality", "value": 1},
+                                            {"source": "Self", "target": "Relation", "value": 1},
+                                            {"source": "Self", "target": "Function", "value": 1},
+                                            {"source": "Self", "target": "Story", "value": 1},
+                                            {"source": "Self", "target": "State", "value": 1},
+                                            {"source": "Self", "target": "Goal", "value": 1},
+                                            {"source": "Relation", "target": "Object", "value": 1},
+                                            {"source": "Relation", "target": "Person", "value": 1},
+                                            {"source": "Relation", "target": "Event", "value": 1},
+                                            {"source": "Function", "target": "Input", "value": 1},
+                                            {"source": "Function", "target": "Output", "value": 1},
+                                            {"source": "Story", "target": "20", "value": 1},
+                                            {"source": "Story", "target": "40", "value": 1},
+                                            {"source": "Story", "target": "60", "value": 1},
+                                            {"source": "Story", "target": "80", "value": 1},
+                                            {"source": "State", "target": "Positive", "value": 1},
+                                            {"source": "State", "target": "Negative", "value": 1},
+                                            {"source": "Goal", "target": "f1", "value": 1},
+                                            {"source": "Goal", "target": "f2", "value": 1},
+                                            {"source": "Goal", "target": "f3", "value": 1},
+                                            {"source": "Goal", "target": "f4", "value": 1},
+                                            {"source": "Goal", "target": "f5", "value": 1},
+                                            {"source": "Input", "target": "Sound", "value": 1},
+                                            {"source": "Input", "target": "Taste", "value": 1},
+                                            {"source": "Input", "target": "Vision", "value": 1},
+                                            {"source": "Input", "target": "Tactile", "value": 1},
+                                            {"source": "Input", "target": "Other", "value": 1},
+                                            {"source": "Output", "target": "Vision", "value": 1},
+                                            {"source": "Output", "target": "Speech", "value": 1},
+                                            {"source": "Output", "target": "Expression", "value": 1},
+                                            {"source": "Output", "target": "Action", "value": 1},
+                                            {"source": "Output", "target": "Other", "value": 1}
+                                            ]
+                    }
+                </script>
+                <style>
+                    .links line {
+                        stroke: #aaa;
+                    }
+                .nodes circle {
+                    pointer-events: all;
+                    stroke: none;
+                    stroke-width: 40px;
+                }
+                </style>
+    </head>
+    <body>
+        <svg width="700" height="640"></svg>
+        
+        <script type="text/javascript">
+            var svg = d3.select("svg"),
             width = +svg.attr("width"),
             height = +svg.attr("height");
-
-        var simulation = d3.forceSimulation()
+            
+            var simulation = d3.forceSimulation()
             .force("link", d3.forceLink().id(function(d) { return d.id; }))
             .force("charge", d3.forceManyBody())
             .force("center", d3.forceCenter(width / 2, height / 2));
-
-        var link = svg.append("g")
-            .attr("class", "links")
-            .selectAll("line")
-            .data(graph.links)
-            .enter().append("line");
-
-        var node = svg.append("g")
+            
+            var node = svg.append("g")
             .attr("class", "nodes")
             .selectAll("circle")
             .data(graph.nodes)
@@ -45,126 +110,61 @@
                   .on("start", dragstarted)
                   .on("drag", dragged)
                   .on("end", dragended));
-          
-        var label = svg.append("g")
-            .attr("class", "label")
-            .selectAll("text")
-            .data(graph.nodes)
-            .enter().append("text")
-            .text(function(data){ return data.id })
-
-        node.append("title")
-            .text(function(d) { return d.id; });
-            
-        simulation
-            .nodes(graph.nodes)
-            .on("tick", ticked);
-            
-        simulation.force("link")
-            .links(graph.links);
+                  
+                  var link = svg.append("g")
+                  .attr("class", "links")
+                  .selectAll("line")
+                  .data(graph.links)
+                  .enter().append("line");
+                  
+                  var label = svg.append("g")
+                  .attr("class", "label")
+                  .selectAll("text")
+                  .data(graph.nodes)
+                  .enter().append("text")
+                  .text(function(data){ return data.id })
+                  
+                  node.append("title")
+                  .text(function(d) { return d.id; });
+                  
+                  simulation
+                  .nodes(graph.nodes)
+                  .on("tick", ticked);
+                  
+                  simulation.force("link")
+                  .links(graph.links);
+                  
+                  function ticked() {
+                      link
+                      .attr("x1", function(d) { return d.source.x; })
+                      .attr("y1", function(d) { return d.source.y; })
+                      .attr("x2", function(d) { return d.target.x; })
+                      .attr("y2", function(d) { return d.target.y; });
+                      node
+                      .attr("cx", function(d) { return d.x; })
+                      .attr("cy", function(d) { return d.y; });
+                      label
+                      .attr("x", function(d) { return d.x; })
+                      .attr("y", function(d) { return d.y; });
+                  }
         
-        function ticked() {
-            link
-                .attr("x1", function(d) { return d.source.x; })
-                .attr("y1", function(d) { return d.source.y; })
-                .attr("x2", function(d) { return d.target.x; })
-                .attr("y2", function(d) { return d.target.y; });
-            node
-                .attr("cx", function(d) { return d.x; })
-                .attr("cy", function(d) { return d.y; });
-            label
-                .attr("x", function(d) { return d.x; })
-                .attr("y", function(d) { return d.y; });
-        }
-    
         function dragstarted(d) {
             if (!d3.event.active) simulation.alphaTarget(0.3).restart();
             d.fx = d.x;
             d.fy = d.y;
         }
-    
+        
         function dragged(d) {
             d.fx = d3.event.x;
             d.fy = d3.event.y;
         }
-    
+        
         function dragended(d) {
             if (!d3.event.active) simulation.alphaTarget(0);
             d.fx = null;
             d.fy = null;
         }
-
-        var graph = {
-            "nodes": [
-                      {"id": "Self", "group": 1},
-                      {"id": "Personality", "group": 2},
-                      {"id": "Relation", "group": 3},
-                      {"id": "Function", "group": 4},
-                      {"id": "Story", "group": 5},
-                      {"id": "State", "group": 6},
-                      {"id": "Goal", "group": 7},
-                      {"id": "Object", "group": 3},
-                      {"id": "Person", "group": 3},
-                      {"id": "Event", "group": 3},
-                      {"id": "Input", "group": 4},
-                      {"id": "Output", "group": 4},
-                      {"id": "20", "group": 5},
-                      {"id": "40", "group": 5},
-                      {"id": "60", "group": 5},
-                      {"id": "80", "group": 5},
-                      {"id": "Positive", "group": 6},
-                      {"id": "Negative", "group": 6},
-                      {"id": "f1", "group": 7},
-                      {"id": "f2", "group": 7},
-                      {"id": "f3", "group": 7},
-                      {"id": "f4", "group": 7},
-                      {"id": "f5", "group": 7},
-                      {"id": "Sound", "group": 4},
-                      {"id": "Taste", "group": 4},
-                      {"id": "Vision", "group": 4},
-                      {"id": "Tactile", "group": 4},
-                      {"id": "Speech", "group": 4},
-                      {"id": "Expression", "group": 4},
-                      {"id": "Action", "group": 4},
-                      {"id": "Other", "group": 4},
-                      ],
-            "links": [
-                      {"source": "Self", "target": "Personality", "value": 1},
-                      {"source": "Self", "target": "Relation", "value": 1},
-                      {"source": "Self", "target": "Function", "value": 1},
-                      {"source": "Self", "target": "Story", "value": 1},
-                      {"source": "Self", "target": "State", "value": 1},
-                      {"source": "Self", "target": "Goal", "value": 1},
-                      {"source": "Relation", "target": "Object", "value": 1},
-                      {"source": "Relation", "target": "Person", "value": 1},
-                      {"source": "Relation", "target": "Event", "value": 1},
-                      {"source": "Function", "target": "Input", "value": 1},
-                      {"source": "Function", "target": "Output", "value": 1},
-                      {"source": "Story", "target": "20", "value": 1},
-                      {"source": "Story", "target": "40", "value": 1},
-                      {"source": "Story", "target": "60", "value": 1},
-                      {"source": "Story", "target": "80", "value": 1},
-                      {"source": "State", "target": "Positive", "value": 1},
-                      {"source": "State", "target": "Negative", "value": 1},
-                      {"source": "Goal", "target": "f1", "value": 1},
-                      {"source": "Goal", "target": "f2", "value": 1},
-                      {"source": "Goal", "target": "f3", "value": 1},
-                      {"source": "Goal", "target": "f4", "value": 1},
-                      {"source": "Goal", "target": "f5", "value": 1},
-                      {"source": "Input", "target": "Sound", "value": 1},
-                      {"source": "Input", "target": "Taste", "value": 1},
-                      {"source": "Input", "target": "Vision", "value": 1},
-                      {"source": "Input", "target": "Tactile", "value": 1},
-                      {"source": "Input", "target": "Other", "value": 1},
-                      {"source": "Output", "target": "Vision", "value": 1},
-                      {"source": "Output", "target": "Speech", "value": 1},
-                      {"source": "Output", "target": "Expression", "value": 1},
-                      {"source": "Output", "target": "Action", "value": 1},
-                      {"source": "Output", "target": "Other", "value": 1}
-                      ]
-            }
-        
-    </script>
-</body>
+        </script>
+    </body>
 </html>
 

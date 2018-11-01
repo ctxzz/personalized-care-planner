@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06451585218231AD00860F83 /* self-alone-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06451584218231AD00860F83 /* self-alone-sheet.pdf */; };
-		06451586218231B100860F83 /* self-alone-sheet.pdf in Sources */ = {isa = PBXBuildFile; fileRef = 06451584218231AD00860F83 /* self-alone-sheet.pdf */; };
-		0645158C2182E56400860F83 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
-		0645158D2182E5DC00860F83 /* index.html in Sources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
-		0645158F2182E75B00860F83 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
-		064515902182E76100860F83 /* d3.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		0682AD422162554200E21140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD412162554200E21140 /* AppDelegate.swift */; };
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
@@ -22,6 +16,9 @@
 		0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89F217F54EA00A02AAF /* Graph.framework */; };
 		0682D8A221808C7A00A02AAF /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */; };
 		0682D8A42180962800A02AAF /* PersonTableFABMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */; };
+		06AC34D4218AF7AC00C2D7DC /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */; };
+		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
+		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
 		06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */; };
 		06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E21217A373B00641545 /* TabBarGraphViewController.swift */; };
@@ -58,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
-		06451584218231AD00860F83 /* self-alone-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "self-alone-sheet.pdf"; sourceTree = "<group>"; };
 		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		0682AD3E2162554200E21140 /* personalized-care-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personalized-care-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +72,7 @@
 		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
+		06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "self-sheet.pdf"; path = "../../../../Dropbox/self-sheet.pdf"; sourceTree = "<group>"; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
 		06B35E21217A373B00641545 /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +137,7 @@
 		0645157F21821D1300860F83 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				06451584218231AD00860F83 /* self-alone-sheet.pdf */,
+				06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -405,10 +402,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0645158C2182E56400860F83 /* index.html in Resources */,
-				06451585218231AD00860F83 /* self-alone-sheet.pdf in Resources */,
+				06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */,
+				06AC34D5218B013600C2D7DC /* index.html in Resources */,
+				06AC34D4218AF7AC00C2D7DC /* self-sheet.pdf in Resources */,
 				06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */,
-				0645158F2182E75B00860F83 /* d3.min.js in Resources */,
 				0682AD492162554200E21140 /* Assets.xcassets in Resources */,
 				06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */,
 			);
@@ -540,9 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				064515902182E76100860F83 /* d3.min.js in Sources */,
-				0645158D2182E5DC00860F83 /* index.html in Sources */,
-				06451586218231B100860F83 /* self-alone-sheet.pdf in Sources */,
 				06F095FB217751D300CCAA0B /* SplitDetailViewController.swift in Sources */,
 				06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */,
 				0682D8A42180962800A02AAF /* PersonTableFABMenuViewController.swift in Sources */,

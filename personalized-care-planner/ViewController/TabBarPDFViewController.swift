@@ -31,7 +31,7 @@ class TabBarPDFViewController: UIViewController {
     }
     
     func getDocument() -> PDFDocument? {
-        guard let path = Bundle.main.path(forResource: "self-alone-sheet", ofType: "pdf") else {
+        guard let path = Bundle.main.path(forResource: "self-sheet", ofType: "pdf") else {
             print("failed to get path.")
             return nil
         }
@@ -40,7 +40,6 @@ class TabBarPDFViewController: UIViewController {
         let document = PDFDocument.init(url: pdfURL)
         
         return document
-        
     }
 }
 
