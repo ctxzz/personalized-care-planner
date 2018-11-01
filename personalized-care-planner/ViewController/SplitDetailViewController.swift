@@ -36,7 +36,7 @@ extension SplitDetailViewController {
         rightNavigationItems.append(moreButton)
         let printButton = UIBarButtonItem.init(image: Icon.cm.image, style: .plain, target: self, action: nil)
         rightNavigationItems.append(printButton)
-        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: nil)
+        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(tagViewController))
         rightNavigationItems.append(addButton)
         navigationItem.rightBarButtonItems = rightNavigationItems
     }
@@ -58,5 +58,13 @@ extension SplitDetailViewController {
         tabViewControllers.append(tabBarStaticsVC)
         
         self.setViewControllers(tabViewControllers, animated: false)
+    }
+}
+
+extension SplitDetailViewController {
+    @objc func tagViewController() {  /// after: add arguments
+        let tagVC = TagViewController()
+        let navTagVC = NavigationController.init(rootViewController: tagVC)
+        self.present(navTagVC, animated: true, completion: nil)
     }
 }

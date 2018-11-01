@@ -19,6 +19,7 @@
 		06AC34D4218AF7AC00C2D7DC /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */; };
 		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
 		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
+		06AC34D8218B0F6400C2D7DC /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AC34D7218B0F6400C2D7DC /* TagViewController.swift */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
 		06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */; };
 		06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E21217A373B00641545 /* TabBarGraphViewController.swift */; };
@@ -73,6 +74,7 @@
 		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
 		06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "self-sheet.pdf"; path = "../../../../Dropbox/self-sheet.pdf"; sourceTree = "<group>"; };
+		06AC34D7218B0F6400C2D7DC /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
 		06B35E21217A373B00641545 /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				06B35E21217A373B00641545 /* TabBarGraphViewController.swift */,
 				06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */,
 				0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */,
+				06AC34D7218B0F6400C2D7DC /* TagViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
 				06B35E1E217A265300641545 /* PersonTableView.swift in Sources */,
 				06F095F721774EF100CCAA0B /* SplitMasterViewController.swift in Sources */,
+				06AC34D8218B0F6400C2D7DC /* TagViewController.swift in Sources */,
 				06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */,
 				06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */,
 			);
