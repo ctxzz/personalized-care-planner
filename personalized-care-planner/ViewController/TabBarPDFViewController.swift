@@ -15,7 +15,7 @@ class TabBarPDFViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PDF"        
+        title = "PDF"
     }
     
     override func viewDidAppear(_ animated: Bool) {

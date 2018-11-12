@@ -12,18 +12,18 @@ import Material
 class RootViewController: UISplitViewController {
     var fabMenuC: PersonTableFABMenuViewController!
     var masterVC: SplitMasterViewController!
-    var masterNavC: UINavigationController!
+    var masterNC: UINavigationController!
     var detailVC: SplitDetailViewController!
-    var detailNavC: UINavigationController!
+    var detailNC: UINavigationController!
     
     func initializer() {
         masterVC = SplitMasterViewController()
         fabMenuC = PersonTableFABMenuViewController.init(rootViewController: masterVC)
-        masterNavC = UINavigationController.init(rootViewController: fabMenuC)
+        masterNC = UINavigationController.init(rootViewController: fabMenuC)
         
         detailVC = SplitDetailViewController()
-        detailNavC = UINavigationController.init(rootViewController: detailVC)
-        viewControllers = [masterNavC, detailNavC]
+        detailNC = UINavigationController.init(rootViewController: detailVC)
+        viewControllers = [masterNC, detailNC]
     }
     
     override func viewDidLoad() {

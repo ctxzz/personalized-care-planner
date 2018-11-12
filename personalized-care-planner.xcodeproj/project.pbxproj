@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */; };
+		064C68F82199C8E2006AE88E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F02199C8E2006AE88E /* RootViewController.swift */; };
+		064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */; };
+		064C68FA2199C8E2006AE88E /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F22199C8E2006AE88E /* TagViewController.swift */; };
+		064C68FB2199C8E2006AE88E /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F32199C8E2006AE88E /* TabBarPDFViewController.swift */; };
+		064C68FC2199C8E2006AE88E /* TabBarStaticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F42199C8E2006AE88E /* TabBarStaticsViewController.swift */; };
+		064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */; };
+		064C68FE2199C8E2006AE88E /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */; };
+		064C69002199C9A0006AE88E /* AddModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68FF2199C9A0006AE88E /* AddModalViewController.swift */; };
 		0682AD422162554200E21140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD412162554200E21140 /* AppDelegate.swift */; };
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
@@ -15,23 +24,15 @@
 		0682D89E217F3C5F00A02AAF /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89D217F3C5F00A02AAF /* Motion.framework */; };
 		0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89F217F54EA00A02AAF /* Graph.framework */; };
 		0682D8A221808C7A00A02AAF /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */; };
-		0682D8A42180962800A02AAF /* PersonTableFABMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */; };
 		06AC34D4218AF7AC00C2D7DC /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */; };
 		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
 		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
-		06AC34D8218B0F6400C2D7DC /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AC34D7218B0F6400C2D7DC /* TagViewController.swift */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
-		06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */; };
-		06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E21217A373B00641545 /* TabBarGraphViewController.swift */; };
-		06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */; };
-		06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F095E021774E8A00CCAA0B /* RootViewController.swift */; };
 		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
 		06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E321774E8A00CCAA0B /* model-relation-v1.dot */; };
 		06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F321774EC600CCAA0B /* Realm.framework */; };
 		06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F421774EC600CCAA0B /* RealmSwift.framework */; };
 		06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F521774EC600CCAA0B /* SwiftyJSON.framework */; };
-		06F095F721774EF100CCAA0B /* SplitMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F095F621774EF100CCAA0B /* SplitMasterViewController.swift */; };
-		06F095FB217751D300CCAA0B /* SplitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F095FA217751D300CCAA0B /* SplitDetailViewController.swift */; };
 		5E51057E64E50E4D1C520C44 /* Pods_personalized_care_plannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC2B2A1F6E9DF54569D2A8E /* Pods_personalized_care_plannerTests.framework */; };
 		7498EBAF60D5DB4F1ABC8CEE /* Pods_personalized_care_plannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EB655EA4161FAED16B1E27 /* Pods_personalized_care_plannerUITests.framework */; };
 		FD6C8D89A911707EA5016DF4 /* Pods_personalized_care_planner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F862B3B762367E6203A92F /* Pods_personalized_care_planner.framework */; };
@@ -58,6 +59,15 @@
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
+		064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitMasterViewController.swift; sourceTree = "<group>"; };
+		064C68F02199C8E2006AE88E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
+		064C68F22199C8E2006AE88E /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		064C68F32199C8E2006AE88E /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
+		064C68F42199C8E2006AE88E /* TabBarStaticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarStaticsViewController.swift; sourceTree = "<group>"; };
+		064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitDetailViewController.swift; sourceTree = "<group>"; };
+		064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
+		064C68FF2199C9A0006AE88E /* AddModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModalViewController.swift; sourceTree = "<group>"; };
 		0682AD3E2162554200E21140 /* personalized-care-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personalized-care-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD412162554200E21140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0682AD482162554200E21140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,14 +82,8 @@
 		0682D89D217F3C5F00A02AAF /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
 		06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "self-sheet.pdf"; path = "../../../../Dropbox/self-sheet.pdf"; sourceTree = "<group>"; };
-		06AC34D7218B0F6400C2D7DC /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
-		06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPDFViewController.swift; sourceTree = "<group>"; };
-		06B35E21217A373B00641545 /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
-		06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStaticsViewController.swift; sourceTree = "<group>"; };
-		06F095E021774E8A00CCAA0B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "model-relation-v1.pdf"; sourceTree = "<group>"; };
 		06F095E321774E8A00CCAA0B /* model-relation-v1.dot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "model-relation-v1.dot"; sourceTree = "<group>"; };
 		06F095EC21774EB800CCAA0B /* FontAwesomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,8 +93,6 @@
 		06F095F321774EC600CCAA0B /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F095F421774EC600CCAA0B /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F095F521774EC600CCAA0B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06F095F621774EF100CCAA0B /* SplitMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitMasterViewController.swift; sourceTree = "<group>"; };
-		06F095FA217751D300CCAA0B /* SplitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitDetailViewController.swift; sourceTree = "<group>"; };
 		0CC2B2A1F6E9DF54569D2A8E /* Pods_personalized_care_plannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_personalized_care_plannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		238E5126F524239AE13FE2D1 /* Pods-personalized-care-plannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CA3B27108403E4C685948F0 /* Pods-personalized-care-plannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerUITests/Pods-personalized-care-plannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,22 @@
 			path = html;
 			sourceTree = "<group>";
 		};
+		064C68EE2199C8E2006AE88E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */,
+				064C68F02199C8E2006AE88E /* RootViewController.swift */,
+				064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */,
+				064C68F22199C8E2006AE88E /* TagViewController.swift */,
+				064C68F32199C8E2006AE88E /* TabBarPDFViewController.swift */,
+				064C68F42199C8E2006AE88E /* TabBarStaticsViewController.swift */,
+				064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */,
+				064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */,
+				064C68FF2199C9A0006AE88E /* AddModalViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0682AD352162554200E21140 = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +212,11 @@
 		0682AD402162554200E21140 /* personalized-care-planner */ = {
 			isa = PBXGroup;
 			children = (
+				064C68EE2199C8E2006AE88E /* ViewController */,
 				064515882182E52E00860F83 /* WebView */,
 				0645157F21821D1300860F83 /* Asset */,
 				06F095E121774E8A00CCAA0B /* Model */,
 				06F095E421774E8A00CCAA0B /* View */,
-				06F095DF21774E8A00CCAA0B /* ViewController */,
 				0682AD412162554200E21140 /* AppDelegate.swift */,
 				0682AD482162554200E21140 /* Assets.xcassets */,
 				0682AD4D2162554200E21140 /* Info.plist */,
@@ -222,21 +240,6 @@
 				0682AD632162554300E21140 /* Info.plist */,
 			);
 			path = "personalized-care-plannerUITests";
-			sourceTree = "<group>";
-		};
-		06F095DF21774E8A00CCAA0B /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				06F095E021774E8A00CCAA0B /* RootViewController.swift */,
-				06F095F621774EF100CCAA0B /* SplitMasterViewController.swift */,
-				06F095FA217751D300CCAA0B /* SplitDetailViewController.swift */,
-				06B35E1F217A36E500641545 /* TabBarPDFViewController.swift */,
-				06B35E21217A373B00641545 /* TabBarGraphViewController.swift */,
-				06B35E23217A378C00641545 /* TabBarStaticsViewController.swift */,
-				0682D8A32180962800A02AAF /* PersonTableFABMenuViewController.swift */,
-				06AC34D7218B0F6400C2D7DC /* TagViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		06F095E121774E8A00CCAA0B /* Model */ = {
@@ -540,16 +543,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F095FB217751D300CCAA0B /* SplitDetailViewController.swift in Sources */,
-				06F095E521774E8A00CCAA0B /* RootViewController.swift in Sources */,
-				0682D8A42180962800A02AAF /* PersonTableFABMenuViewController.swift in Sources */,
-				06B35E22217A373B00641545 /* TabBarGraphViewController.swift in Sources */,
+				064C69002199C9A0006AE88E /* AddModalViewController.swift in Sources */,
+				064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */,
+				064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */,
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
 				06B35E1E217A265300641545 /* PersonTableView.swift in Sources */,
-				06F095F721774EF100CCAA0B /* SplitMasterViewController.swift in Sources */,
-				06AC34D8218B0F6400C2D7DC /* TagViewController.swift in Sources */,
-				06B35E24217A378C00641545 /* TabBarStaticsViewController.swift in Sources */,
-				06B35E20217A36E500641545 /* TabBarPDFViewController.swift in Sources */,
+				064C68FA2199C8E2006AE88E /* TagViewController.swift in Sources */,
+				064C68FE2199C8E2006AE88E /* TabBarGraphViewController.swift in Sources */,
+				064C68F82199C8E2006AE88E /* RootViewController.swift in Sources */,
+				064C68FB2199C8E2006AE88E /* TabBarPDFViewController.swift in Sources */,
+				064C68FC2199C8E2006AE88E /* TabBarStaticsViewController.swift in Sources */,
+				064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +710,7 @@
 				INFOPLIST_FILE = "personalized-care-planner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-planner";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.personalized-care-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -723,7 +727,7 @@
 				INFOPLIST_FILE = "personalized-care-planner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kirilab.personalized-care-planner";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.personalized-care-planner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
