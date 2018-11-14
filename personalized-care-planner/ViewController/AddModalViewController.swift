@@ -23,15 +23,16 @@ class AddModalViewController: UIViewController {
     let section = ["Tag Detail"]
     let items = [["Category", "Color", "Description"]]
     var tableView: UITableView!
-    var colorList = ["Red", "Blue", "Gray"]
-    var categoryList = ["personality", "relation", "story", "goal"]
     var tag: Tag!
+    
+    var addSubMVC: AddSubModalViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Annotation"
         view.backgroundColor = .white
         
+        addSubMVC = AddSubModalViewController()
         prepareNavigationBar()
         prepareTableView()
     }
@@ -71,6 +72,21 @@ extension AddModalViewController {
     }
 }
 
+extension AddModalViewController: ModalSelectDelegate {
+    func onSelected(category: String) {
+        let selectedCell = self.tableView.cellForRow(at: IndexPath.init(row: 0, section: 0))
+        selectedCell?.detailTextLabel?.text = category
+        selectedCell?.isSelected = false
+        
+    }
+    
+    func onSelected(color: String) {
+        let selectedCell = self.tableView.cellForRow(at: IndexPath.init(row: 1, section: 0))
+        selectedCell?.detailTextLabel?.text = color
+        selectedCell?.isSelected = false
+    }
+}
+
 extension AddModalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items[section].count
@@ -79,10 +95,28 @@ extension AddModalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
         cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
+        cell.detailTextLabel?.text = ""
         cell.selectionStyle = .blue
         cell.accessoryType = .disclosureIndicator
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = items[indexPath.section][indexPath.row]
+        
+        switch selectedItem {
+        case items[0][0]:
+            addSubMVC.initializate(listType: .category)
+            addSubMVC.delegate = self
+            self.navigationController?.pushViewController(addSubMVC, animated: true)
+        case items[0][1]:
+            addSubMVC.initializate(listType: .color)
+            addSubMVC.delegate = self
+            self.navigationController?.pushViewController(addSubMVC, animated: true)
+        default:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

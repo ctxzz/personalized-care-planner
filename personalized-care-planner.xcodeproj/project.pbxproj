@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064873F9219BFEBC00B3E6B2 /* AddSubModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873F8219BFEBC00B3E6B2 /* AddSubModalViewController.swift */; };
 		064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */; };
 		064C68F82199C8E2006AE88E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F02199C8E2006AE88E /* RootViewController.swift */; };
 		064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */; };
@@ -59,6 +60,7 @@
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
+		064873F8219BFEBC00B3E6B2 /* AddSubModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubModalViewController.swift; sourceTree = "<group>"; };
 		064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitMasterViewController.swift; sourceTree = "<group>"; };
 		064C68F02199C8E2006AE88E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */,
 				064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */,
 				064C68FF2199C9A0006AE88E /* AddModalViewController.swift */,
+				064873F8219BFEBC00B3E6B2 /* AddSubModalViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				064C69002199C9A0006AE88E /* AddModalViewController.swift in Sources */,
+				064873F9219BFEBC00B3E6B2 /* AddSubModalViewController.swift in Sources */,
 				064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */,
 				064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */,
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
