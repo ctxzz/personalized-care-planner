@@ -10,6 +10,12 @@ import Foundation
 import PDFKit
 import UIKit
 
+protocol TagDelegate {
+    func addTag(tag: Tag) -> ()
+    func removeTag(tag: Tag) -> ()
+    func editTag(tag: Tag) -> ()
+}
+
 class TagViewController: UIViewController {
     var rightNavigationItems: [UIBarButtonItem]!
     var leftNavigationItems: [UIBarButtonItem]!
@@ -69,9 +75,6 @@ extension TagViewController {
         
         pdfPage = pdfView.currentPage
         
-        let test = PDFAnnotation.init(bounds: CGRect.init(x: 100, y: 100, width: 200, height: 200), forType: .circle, withProperties: nil)
-        pdfPage.addAnnotation(test)
-        
         view.addSubview(pdfView)
     }
     
@@ -85,7 +88,7 @@ extension TagViewController {
     }
 }
 
-extension TagViewController {
+extension TagViewController: TagDelegate {
     @objc func exitViewController() {
 //        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
 //            let path = url.appendingPathComponent("output.pdf")
@@ -105,10 +108,31 @@ extension TagViewController {
     }
     
     @objc func addAnnotation() {
-        let addAnnotationNC = UINavigationController.init(rootViewController: AddModalViewController())
+        let addAnnotationVC = AddModalViewController()
+        addAnnotationVC.delegate = self
+        let addAnnotationNC = UINavigationController.init(rootViewController: addAnnotationVC)
         addAnnotationNC.modalTransitionStyle = .coverVertical
         addAnnotationNC.modalPresentationStyle = .formSheet
         addAnnotationNC.preferredContentSize = CGSize.init(width: 500, height: 500)
         self.present(addAnnotationNC, animated: true, completion: nil)
+    }
+    
+    func addTag(tag: Tag) {
+        let size = tag.getSize()
+        let point = tag.getPoint()
+        let textAnnotation = PDFAnnotation.init(bounds: CGRect.init(x: point.x, y: point.y, width: size.width, height: size.height), forType: .freeText, withProperties: nil)
+        textAnnotation.contents = tag.description
+        textAnnotation.backgroundColor = tag.color
+        textAnnotation.color = tag.color
+        textAnnotation.interiorColor = tag.color
+        textAnnotation.font = UIFont.systemFont(ofSize: 45)
+
+        pdfPage.addAnnotation(textAnnotation)
+    }
+    
+    func removeTag(tag: Tag) {
+    }
+    
+    func editTag(tag:Tag) {
     }
 }

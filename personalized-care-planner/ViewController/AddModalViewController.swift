@@ -15,9 +15,52 @@ struct Tag {
     var color: UIColor = .gray
     var category: String = ""
     var description: String = ""
+    var size: CGSize = CGSize.init(width: 100, height: 100)
+    var position: CGPoint = CGPoint.init(x: 10, y: 10)
+    
+    func getSize() -> CGSize {
+        let charSize = 50
+        let maxRow = 10
+        let minRow = description.count
+        let colum = description.count / maxRow
+
+        if colum <= 0 {
+            let width = minRow * charSize
+            let height = charSize
+            return CGSize.init(width: width, height: height)
+        } else {
+            let width = maxRow * charSize
+            let height = colum * charSize
+            return CGSize.init(width: width, height: height)
+        }
+    }
+    
+    func getPoint() -> CGPoint {
+        switch category {
+        case "personality":
+            let x = Int.random(in: 1 ... 1500)
+            let y = Int.random(in: 1100 ... 2200)
+            return CGPoint.init(x: x, y: y)
+        case "relation":
+            let x = Int.random(in: 1600 ... 3300)
+            let y = Int.random(in: 1100 ... 2200)
+            return CGPoint.init(x: x, y: y)
+        case "story":
+            let x = Int.random(in: 1 ... 1500)
+            let y = Int.random(in: 1 ... 1100)
+            return CGPoint.init(x: x, y: y)
+        case "goal":
+            let x = Int.random(in: 1600 ... 3300)
+            let y = Int.random(in: 1 ... 1100)
+            return CGPoint.init(x: x, y: y)
+        default:
+            return CGPoint.init(x: 10, y: 10)
+        }
+    }
 }
 
 class AddModalViewController: UIViewController {
+    var delegate: TagDelegate? = nil
     var leftNavigationItems: [UIBarButtonItem]!
     var rightNavigationItems: [UIBarButtonItem]!
     let section = ["Tag Type", "Description"]
@@ -69,17 +112,22 @@ extension AddModalViewController {
     }
     
     @objc func saveTag() {
-        //
+        if let cell = tableView.visibleCells[tableView.visibleCells.count - 1] as? TextFieldViewCell {
+            cell.textField.resignFirstResponder()
+        }
+        
+        self.delegate?.addTag(tag: tag)
+        dismiss(animated: true, completion: nil)
     }
     
     func stringToColor(colorName: String) -> UIColor {
         switch colorName {
         case "Red":
-            return .red
+            return UIColor.init(red: 255, green: 0, blue: 0, alpha: 0.5)
         case "Blue":
-            return .blue
+            return UIColor.init(red: 0, green: 0, blue: 255, alpha: 0.3)
         case "Gray":
-            return .gray
+            return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.3)
         default:
             return .gray
         }
