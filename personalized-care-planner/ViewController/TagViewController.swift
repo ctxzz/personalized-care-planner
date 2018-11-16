@@ -61,7 +61,7 @@ extension TagViewController {
         rightNavigationItems = []
         let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addAnnotation))
         rightNavigationItems.append(addButton)
-        let saveButton = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: nil)
+        let saveButton = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(saveAnnotation))
         rightNavigationItems.append(saveButton)
         navigationItem.rightBarButtonItems = rightNavigationItems
     }
@@ -72,7 +72,6 @@ extension TagViewController {
         pdfView.displaysPageBreaks = false
         pdfView.displayMode = .singlePage
         pdfView.document = getDocument()
-        
         pdfPage = pdfView.currentPage
         
         view.addSubview(pdfView)
@@ -117,16 +116,21 @@ extension TagViewController: TagDelegate {
         self.present(addAnnotationNC, animated: true, completion: nil)
     }
     
+    @objc func saveAnnotation() {
+    }
+    
     func addTag(tag: Tag) {
         let size = tag.getSize()
         let point = tag.getPoint()
         let textAnnotation = PDFAnnotation.init(bounds: CGRect.init(x: point.x, y: point.y, width: size.width, height: size.height), forType: .freeText, withProperties: nil)
         textAnnotation.contents = tag.description
-        textAnnotation.backgroundColor = tag.color
-        textAnnotation.color = tag.color
         textAnnotation.interiorColor = tag.color
+        textAnnotation.color = tag.color
         textAnnotation.font = UIFont.systemFont(ofSize: 45)
-
+        textAnnotation.border = PDFBorder.init()
+        textAnnotation.destination = PDFDestination.init(page: pdfPage, at: point)
+        
+        
         pdfPage.addAnnotation(textAnnotation)
     }
     

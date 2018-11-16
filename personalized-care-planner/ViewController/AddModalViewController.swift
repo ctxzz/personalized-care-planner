@@ -19,10 +19,10 @@ struct Tag {
     var position: CGPoint = CGPoint.init(x: 10, y: 10)
     
     func getSize() -> CGSize {
-        let charSize = 50
+        let charSize = 46
         let maxRow = 10
         let minRow = description.count
-        let colum = description.count / maxRow
+        let colum = description.count / maxRow + 1
 
         if colum <= 0 {
             let width = minRow * charSize
