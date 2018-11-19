@@ -12,11 +12,21 @@ import Material
 
 struct Tag {
 //    let user: User
-    var color: UIColor = .gray
-    var category: String = ""
-    var description: String = ""
-    var size: CGSize = CGSize.init(width: 100, height: 100)
-    var position: CGPoint = CGPoint.init(x: 10, y: 10)
+    var color: UIColor
+    var category: String
+    var description: String
+    var size: CGSize
+    var position: CGPoint
+    var isTappedPosition: Bool
+    
+    init() {
+        self.color = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.3)
+        self.category = ""
+        self.description = ""
+        self.size = CGSize.init(width: 0, height: 0)
+        self.position = CGPoint.init(x: 0, y: 0)
+        self.isTappedPosition = false
+    }
     
     func getSize() -> CGSize {
         let charSize = 46
@@ -36,9 +46,10 @@ struct Tag {
     }
     
     func getPoint() -> CGPoint {
+        if isTappedPosition { return position }
         switch category {
         case "personality":
-            let x = Int.random(in: 1 ... 1500)
+            let x = Int.random(in: 1 ... 1599)
             let y = Int.random(in: 1100 ... 2200)
             return CGPoint.init(x: x, y: y)
         case "relation":
@@ -46,15 +57,33 @@ struct Tag {
             let y = Int.random(in: 1100 ... 2200)
             return CGPoint.init(x: x, y: y)
         case "story":
-            let x = Int.random(in: 1 ... 1500)
-            let y = Int.random(in: 1 ... 1100)
+            let x = Int.random(in: 1 ... 1599)
+            let y = Int.random(in: 1 ... 1099)
             return CGPoint.init(x: x, y: y)
         case "goal":
             let x = Int.random(in: 1600 ... 3300)
-            let y = Int.random(in: 1 ... 1100)
+            let y = Int.random(in: 1 ... 1099)
             return CGPoint.init(x: x, y: y)
         default:
             return CGPoint.init(x: 10, y: 10)
+        }
+    }
+    
+    func getCategory() -> String {
+        if !isTappedPosition { return category }
+        let x = position.x
+        let y = position.y
+        
+        if x < 1600 && 1100 <= y {
+            return "personality"
+        } else if 1600 <= x && 1100 <= y {
+            return "relation"
+        } else if x < 1600 && y < 1100 {
+            return "story"
+        } else if 1600 <= x && y < 1100 {
+            return "goal"
+        } else {
+            return ""
         }
     }
 }
@@ -67,7 +96,7 @@ class AddModalViewController: UIViewController {
     let items = [["Category", "Color"], [""]]
     var tableView: UITableView!
     var tag = Tag()
-    
+
     var addSubMVC: AddSubModalViewController!
     
     override func viewDidLoad() {
@@ -164,6 +193,9 @@ extension AddModalViewController: UITableViewDelegate, UITableViewDataSource, Te
             let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
             cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
             cell.detailTextLabel?.text = ""
+            if items[indexPath.section][indexPath.row] == "Category" {
+                cell.detailTextLabel?.text = tag.getCategory()
+            }
             cell.selectionStyle = .blue
             cell.accessoryType = .disclosureIndicator
             
@@ -185,6 +217,7 @@ extension AddModalViewController: UITableViewDelegate, UITableViewDataSource, Te
 
         switch selectedItem {
         case items[0][0]:
+            if tag.isTappedPosition { break } /// tap位置が指定されている場合はは変更できない
             addSubMVC.initializate(listType: .category)
             addSubMVC.delegate = self
             self.navigationController?.pushViewController(addSubMVC, animated: true)

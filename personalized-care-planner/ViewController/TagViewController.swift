@@ -11,6 +11,7 @@ import PDFKit
 import UIKit
 
 protocol TagDelegate {
+    
     func addTag(tag: Tag) -> ()
     func removeTag(tag: Tag) -> ()
     func editTag(tag: Tag) -> ()
@@ -80,10 +81,6 @@ extension TagViewController {
     internal func prepareGestureRecognizer(){
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tapPDFView))
         self.pdfView.addGestureRecognizer(tapGesture)
-//        var longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(longPressPDFView))
-//        longPressGesture.minimumPressDuration = 2.0
-//        longPressGesture.allowableMovement = 150
-//        self.pdfView.addGestureRecognizer(longPressGesture)
     }
 }
 
@@ -99,11 +96,17 @@ extension TagViewController: TagDelegate {
     
     @objc func tapPDFView(sender: UITapGestureRecognizer) {
         let tapPoint = sender.location(in: self.pdfView)
-        print("x: ", tapPoint.x, ", y: ", tapPoint.y)
-    }
-    
-    @objc func longPressPDFView() {
-        
+        let tappedPage = pdfView.page(for: tapPoint, nearest: false)
+        if let page = tappedPage {
+            let tapPageLocation = pdfView.convert(tapPoint, to: page)
+            let annotation = page.annotation(at: tapPageLocation)
+            
+            if annotation == nil {
+                addAnnotationIn(tapPosition: tapPageLocation)
+            } else {
+                // edit annotation??
+            }
+        }
     }
     
     @objc func addAnnotation() {
@@ -116,7 +119,24 @@ extension TagViewController: TagDelegate {
         self.present(addAnnotationNC, animated: true, completion: nil)
     }
     
+    func addAnnotationIn(tapPosition: CGPoint) {
+        let addAnnotationVC = AddModalViewController()
+        addAnnotationVC.delegate = self
+        addAnnotationVC.tag.position = tapPosition
+        addAnnotationVC.tag.isTappedPosition = true
+        let addAnnotationNC = UINavigationController.init(rootViewController: addAnnotationVC)
+        addAnnotationNC.modalTransitionStyle = .coverVertical
+        addAnnotationNC.modalPresentationStyle = .formSheet
+        addAnnotationNC.preferredContentSize = CGSize.init(width: 500, height: 500)
+        self.present(addAnnotationNC, animated: true, completion: nil)
+
+    }
+    
     @objc func saveAnnotation() {
+        let annotations = pdfPage.annotations
+        for annotation in annotations {
+            
+        }
     }
     
     func addTag(tag: Tag) {
@@ -129,7 +149,6 @@ extension TagViewController: TagDelegate {
         textAnnotation.font = UIFont.systemFont(ofSize: 45)
         textAnnotation.border = PDFBorder.init()
         textAnnotation.destination = PDFDestination.init(page: pdfPage, at: point)
-        
         
         pdfPage.addAnnotation(textAnnotation)
     }
