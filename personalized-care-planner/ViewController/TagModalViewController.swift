@@ -29,12 +29,12 @@ struct Tag {
     }
     
     func getSize() -> CGSize {
-        let charSize = 46
+        let charSize = 48
         let maxRow = 10
         let minRow = description.count
         let colum = description.count / maxRow + 1
 
-        if colum <= 0 {
+        if colum <= 1 {
             let width = minRow * charSize
             let height = charSize
             return CGSize.init(width: width, height: height)
@@ -86,9 +86,27 @@ struct Tag {
             return ""
         }
     }
+    
+    func getColor(color: UIColor) -> String {
+        switch color {
+        case UIColor(red: 255, green: 0, blue: 0, alpha: 0.5):
+            return "Red"
+        case UIColor(red: 0, green: 0, blue: 255, alpha: 0.3):
+            return "Blue"
+        case UIColor(red: 0, green: 0, blue: 0, alpha: 0.3):
+            return "Gray"
+        default:
+            return "Gray"
+        }
+    }
 }
 
-class AddModalViewController: UIViewController {
+enum TagModalViewMode {
+    case add
+    case edit
+}
+
+class TagModalViewController: UIViewController {
     var delegate: TagDelegate? = nil
     var leftNavigationItems: [UIBarButtonItem]!
     var rightNavigationItems: [UIBarButtonItem]!
@@ -96,21 +114,32 @@ class AddModalViewController: UIViewController {
     let items = [["Category", "Color"], [""]]
     var tableView: UITableView!
     var tag = Tag()
+    var mode: TagModalViewMode!
 
-    var addSubMVC: AddSubModalViewController!
+    var tagSubMVC: TagSubModalViewController!
+    
+    init(mode: TagModalViewMode) {
+        self.mode = mode
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Annotation"
         view.backgroundColor = .white
         
-        addSubMVC = AddSubModalViewController()
+        tagSubMVC = TagSubModalViewController()
         prepareNavigationBar()
         prepareTableView()
     }
 }
 
-extension AddModalViewController {
+extension TagModalViewController {
     internal func prepareNavigationBar() {
         /// LEFT Navigation
         leftNavigationItems = []
@@ -121,7 +150,13 @@ extension AddModalViewController {
         /// RIGHT Navigation
         rightNavigationItems = []
         let saveButton = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(saveTag))
-        rightNavigationItems.append(saveButton)
+        let updateButton = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(updateTag))
+        
+        if self.mode == .add {
+            rightNavigationItems.append(saveButton)
+        } else {
+            rightNavigationItems.append(updateButton)
+        }
         navigationItem.rightBarButtonItems = rightNavigationItems
     }
     
@@ -135,7 +170,7 @@ extension AddModalViewController {
     }
 }
 
-extension AddModalViewController {
+extension TagModalViewController {
     @objc func closeModalView() {
         dismiss(animated: true, completion: nil)
     }
@@ -146,6 +181,15 @@ extension AddModalViewController {
         }
         
         self.delegate?.addTag(tag: tag)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func updateTag() {
+        if let cell = tableView.visibleCells[tableView.visibleCells.count - 1] as? TextFieldViewCell {
+            cell.textField.resignFirstResponder()
+        }
+        
+        self.delegate?.editTag(tag: tag)
         dismiss(animated: true, completion: nil)
     }
     
@@ -163,7 +207,7 @@ extension AddModalViewController {
     }
 }
 
-extension AddModalViewController: ModalSelectDelegate {
+extension TagModalViewController: ModalSelectDelegate {
     func onSelected(category: String) {
         let selectedCell = self.tableView.cellForRow(at: IndexPath.init(row: 0, section: 0))
         selectedCell?.detailTextLabel?.text = category
@@ -179,7 +223,7 @@ extension AddModalViewController: ModalSelectDelegate {
     }
 }
 
-extension AddModalViewController: UITableViewDelegate, UITableViewDataSource, TextFieldViewCellDelegate {
+extension TagModalViewController: UITableViewDelegate, UITableViewDataSource, TextFieldViewCellDelegate {
     func textFieldDidEndEditing(cell: TextFieldViewCell, value: String) {
         self.tag.description = value
     }
@@ -195,6 +239,8 @@ extension AddModalViewController: UITableViewDelegate, UITableViewDataSource, Te
             cell.detailTextLabel?.text = ""
             if items[indexPath.section][indexPath.row] == "Category" {
                 cell.detailTextLabel?.text = tag.getCategory()
+            } else if items[indexPath.section][indexPath.row] == "Color" {
+                cell.detailTextLabel?.text = tag.getColor(color: tag.color)
             }
             cell.selectionStyle = .blue
             cell.accessoryType = .disclosureIndicator
@@ -203,7 +249,7 @@ extension AddModalViewController: UITableViewDelegate, UITableViewDataSource, Te
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TextFieldCell") as! TextFieldViewCell
             cell.selectionStyle = .blue
-            cell.textField.text = items[indexPath.section][0]
+            cell.textField.text = tag.description
             cell.textField.placeholder = "ここをタップして" + section[indexPath.section] + "を入力してください"
             cell.delegate = self
             
@@ -218,13 +264,13 @@ extension AddModalViewController: UITableViewDelegate, UITableViewDataSource, Te
         switch selectedItem {
         case items[0][0]:
             if tag.isTappedPosition { break } /// tap位置が指定されている場合はは変更できない
-            addSubMVC.initializate(listType: .category)
-            addSubMVC.delegate = self
-            self.navigationController?.pushViewController(addSubMVC, animated: true)
+            tagSubMVC.initializate(listType: .category)
+            tagSubMVC.delegate = self
+            self.navigationController?.pushViewController(tagSubMVC, animated: true)
         case items[0][1]:
-            addSubMVC.initializate(listType: .color)
-            addSubMVC.delegate = self
-            self.navigationController?.pushViewController(addSubMVC, animated: true)
+            tagSubMVC.initializate(listType: .color)
+            tagSubMVC.delegate = self
+            self.navigationController?.pushViewController(tagSubMVC, animated: true)
         case items[1][0]: break
             /// do nothing
         default:

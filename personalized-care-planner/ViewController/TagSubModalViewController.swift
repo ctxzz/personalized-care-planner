@@ -1,5 +1,5 @@
 //
-//  AddSubModalViewController.swift
+//  TagSubModalViewController.swift
 //  personalized-care-planner
 //
 //  Created by Atsushi OMATA on 2018/11/14.
@@ -20,7 +20,7 @@ enum ListType: String {
     case category = "Category"
 }
 
-class AddSubModalViewController: UIViewController {
+class TagSubModalViewController: UIViewController {
     var delegate: ModalSelectDelegate?
     var colorList = ["Red", "Blue", "Gray"]
     var categoryList = ["personality", "relation", "story", "goal"]
@@ -82,7 +82,7 @@ class AddSubModalViewController: UIViewController {
     }
 }
 
-extension AddSubModalViewController {
+extension TagSubModalViewController {
     internal func prepareTableView() {
         tableView = UITableView.init(frame: self.navigationController!.view.frame, style: .grouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TagList")
@@ -93,7 +93,7 @@ extension AddSubModalViewController {
     }
 }
 
-extension AddSubModalViewController: UITableViewDelegate, UITableViewDataSource {
+extension TagSubModalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items[section].count
     }

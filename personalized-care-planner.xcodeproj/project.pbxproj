@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		064873F9219BFEBC00B3E6B2 /* AddSubModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873F8219BFEBC00B3E6B2 /* AddSubModalViewController.swift */; };
+		064873F9219BFEBC00B3E6B2 /* TagSubModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */; };
 		064873FB219C77A200B3E6B2 /* TextFieldViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873FA219C77A200B3E6B2 /* TextFieldViewCell.swift */; };
+		064873FD21A6E64800B3E6B2 /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 064873FC21A6E64600B3E6B2 /* self-sheet.pdf */; };
 		064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */; };
 		064C68F82199C8E2006AE88E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F02199C8E2006AE88E /* RootViewController.swift */; };
 		064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */; };
@@ -17,7 +18,7 @@
 		064C68FC2199C8E2006AE88E /* TabBarStaticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F42199C8E2006AE88E /* TabBarStaticsViewController.swift */; };
 		064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */; };
 		064C68FE2199C8E2006AE88E /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */; };
-		064C69002199C9A0006AE88E /* AddModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68FF2199C9A0006AE88E /* AddModalViewController.swift */; };
+		064C69002199C9A0006AE88E /* TagModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68FF2199C9A0006AE88E /* TagModalViewController.swift */; };
 		0682AD422162554200E21140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD412162554200E21140 /* AppDelegate.swift */; };
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
@@ -26,7 +27,6 @@
 		0682D89E217F3C5F00A02AAF /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89D217F3C5F00A02AAF /* Motion.framework */; };
 		0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89F217F54EA00A02AAF /* Graph.framework */; };
 		0682D8A221808C7A00A02AAF /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */; };
-		06AC34D4218AF7AC00C2D7DC /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */; };
 		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
 		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
@@ -61,8 +61,9 @@
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
-		064873F8219BFEBC00B3E6B2 /* AddSubModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubModalViewController.swift; sourceTree = "<group>"; };
+		064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSubModalViewController.swift; sourceTree = "<group>"; };
 		064873FA219C77A200B3E6B2 /* TextFieldViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewCell.swift; sourceTree = "<group>"; };
+		064873FC21A6E64600B3E6B2 /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "self-sheet.pdf"; sourceTree = "<group>"; };
 		064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitMasterViewController.swift; sourceTree = "<group>"; };
 		064C68F02199C8E2006AE88E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +72,7 @@
 		064C68F42199C8E2006AE88E /* TabBarStaticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarStaticsViewController.swift; sourceTree = "<group>"; };
 		064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitDetailViewController.swift; sourceTree = "<group>"; };
 		064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
-		064C68FF2199C9A0006AE88E /* AddModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModalViewController.swift; sourceTree = "<group>"; };
+		064C68FF2199C9A0006AE88E /* TagModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModalViewController.swift; sourceTree = "<group>"; };
 		0682AD3E2162554200E21140 /* personalized-care-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personalized-care-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD412162554200E21140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0682AD482162554200E21140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		0682D89D217F3C5F00A02AAF /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "self-sheet.pdf"; path = "../../../../Dropbox/self-sheet.pdf"; sourceTree = "<group>"; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "model-relation-v1.pdf"; sourceTree = "<group>"; };
 		06F095E321774E8A00CCAA0B /* model-relation-v1.dot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "model-relation-v1.dot"; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		0645157F21821D1300860F83 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				06AC34CD218AF07C00C2D7DC /* self-sheet.pdf */,
+				064873FC21A6E64600B3E6B2 /* self-sheet.pdf */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 				064C68F42199C8E2006AE88E /* TabBarStaticsViewController.swift */,
 				064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */,
 				064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */,
-				064C68FF2199C9A0006AE88E /* AddModalViewController.swift */,
-				064873F8219BFEBC00B3E6B2 /* AddSubModalViewController.swift */,
+				064C68FF2199C9A0006AE88E /* TagModalViewController.swift */,
+				064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -416,10 +416,10 @@
 			files = (
 				06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */,
 				06AC34D5218B013600C2D7DC /* index.html in Resources */,
-				06AC34D4218AF7AC00C2D7DC /* self-sheet.pdf in Resources */,
 				06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */,
 				0682AD492162554200E21140 /* Assets.xcassets in Resources */,
 				06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */,
+				064873FD21A6E64800B3E6B2 /* self-sheet.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,8 +549,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				064C69002199C9A0006AE88E /* AddModalViewController.swift in Sources */,
-				064873F9219BFEBC00B3E6B2 /* AddSubModalViewController.swift in Sources */,
+				064C69002199C9A0006AE88E /* TagModalViewController.swift in Sources */,
+				064873F9219BFEBC00B3E6B2 /* TagSubModalViewController.swift in Sources */,
 				064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */,
 				064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */,
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
