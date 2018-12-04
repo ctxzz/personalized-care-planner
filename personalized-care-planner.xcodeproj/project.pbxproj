@@ -19,6 +19,7 @@
 		064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */; };
 		064C68FE2199C8E2006AE88E /* TabBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */; };
 		064C69002199C9A0006AE88E /* TagModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68FF2199C9A0006AE88E /* TagModalViewController.swift */; };
+		066D40FF21B65FEF0070AEA1 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066D40FE21B65FEF0070AEA1 /* DirectoryManager.swift */; };
 		0682AD422162554200E21140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD412162554200E21140 /* AppDelegate.swift */; };
 		0682AD492162554200E21140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0682AD482162554200E21140 /* Assets.xcassets */; };
 		0682AD572162554300E21140 /* personalized_care_plannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682AD562162554300E21140 /* personalized_care_plannerTests.swift */; };
@@ -73,6 +74,7 @@
 		064C68F52199C8E2006AE88E /* SplitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitDetailViewController.swift; sourceTree = "<group>"; };
 		064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarGraphViewController.swift; sourceTree = "<group>"; };
 		064C68FF2199C9A0006AE88E /* TagModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModalViewController.swift; sourceTree = "<group>"; };
+		066D40FE21B65FEF0070AEA1 /* DirectoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryManager.swift; sourceTree = "<group>"; };
 		0682AD3E2162554200E21140 /* personalized-care-planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "personalized-care-planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682AD412162554200E21140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0682AD482162554200E21140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				0682AD412162554200E21140 /* AppDelegate.swift */,
 				0682AD482162554200E21140 /* Assets.xcassets */,
 				0682AD4D2162554200E21140 /* Info.plist */,
+				066D40FE21B65FEF0070AEA1 /* DirectoryManager.swift */,
 			);
 			path = "personalized-care-planner";
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				064C68FD2199C8E2006AE88E /* SplitDetailViewController.swift in Sources */,
 				064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */,
 				0682AD422162554200E21140 /* AppDelegate.swift in Sources */,
+				066D40FF21B65FEF0070AEA1 /* DirectoryManager.swift in Sources */,
 				06B35E1E217A265300641545 /* PersonTableView.swift in Sources */,
 				064C68FA2199C8E2006AE88E /* TagViewController.swift in Sources */,
 				064C68FE2199C8E2006AE88E /* TabBarGraphViewController.swift in Sources */,

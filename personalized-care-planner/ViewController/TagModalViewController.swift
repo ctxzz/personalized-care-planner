@@ -130,7 +130,12 @@ class TagModalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Add Annotation"
+        title = "Add"
+        
+        if mode == .edit {
+            title = "Edit"
+        }
+        
         view.backgroundColor = .white
         
         tagSubMVC = TagSubModalViewController()

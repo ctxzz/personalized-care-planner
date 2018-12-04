@@ -29,6 +29,12 @@ class TagViewController: UIViewController {
         title = "Tag"
         view.backgroundColor = .white
         
+        do {
+            try DirectoryManager.copyTemplateToCacheDirectory()
+        } catch {
+            print(error)
+        }
+        
         prepareNavigationBar()
         preparePDFView()
         prepareGestureRecognizer()
@@ -39,12 +45,12 @@ class TagViewController: UIViewController {
     }
     
     func getDocument() -> PDFDocument? {
-        guard let path = Bundle.main.path(forResource: "self-sheet", ofType: "pdf") else {
-            print("failed to get path.")
-            return nil
-        }
+//        guard let path = Bundle.main.path(forResource: "self-sheet", ofType: "pdf") else {
+//            print("failed to get path.")
+//            return nil
+//        }
         
-        let pdfURL = URL.init(fileURLWithPath: path)
+        guard let pdfURL = DirectoryManager.cacheFileURL else { return nil}
         let document = PDFDocument.init(url: pdfURL)
         
         return document
@@ -90,7 +96,11 @@ extension TagViewController: TagDelegate {
 //            let path = url.appendingPathComponent("output.pdf")
 //            self.pdfPage.document?.write(to: path)
 //        }
-        
+        do {
+            try DirectoryManager.removeOldCacheFile()
+        } catch {
+            print(error)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -149,6 +159,13 @@ extension TagViewController: TagDelegate {
         for annotation in annotations {
             
         }
+        do {
+            try DirectoryManager.createSaveDirectoryIfNeed()
+            try DirectoryManager.createProfileDirectoryIfNeed(userId: "testid")
+        } catch {
+            print(error)
+        }
+        self.pdfPage.document?.write(to: DirectoryManager.saveFileURL!)
     }
     
     func addTag(tag: Tag) {

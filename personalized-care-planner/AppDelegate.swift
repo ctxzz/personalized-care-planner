@@ -22,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         
+        do {
+            try DirectoryManager.createCacheDirectoryIfNeed()
+        } catch {
+            print(error)
+        }
+        
         return true
     }
     
