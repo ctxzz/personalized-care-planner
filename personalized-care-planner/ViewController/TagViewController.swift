@@ -50,7 +50,7 @@ class TagViewController: UIViewController {
 //            return nil
 //        }
         
-        guard let pdfURL = DirectoryManager.cacheFileURL else { return nil}
+        guard let pdfURL = DirectoryManager.cacheFileURL else { return nil }
         let document = PDFDocument.init(url: pdfURL)
         
         return document
@@ -66,8 +66,8 @@ extension TagViewController {
         navigationItem.leftBarButtonItems = leftNavigationItems
         /// RIGHT Navigation
         rightNavigationItems = []
-        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addAnnotation))
-        rightNavigationItems.append(addButton)
+//        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addAnnotation))
+//        rightNavigationItems.append(addButton)
         let saveButton = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(saveAnnotation))
         rightNavigationItems.append(saveButton)
         navigationItem.rightBarButtonItems = rightNavigationItems
@@ -119,21 +119,21 @@ extension TagViewController: TagDelegate {
         }
     }
     
-    @objc func addAnnotation() {
-        let addAnnotationVC = TagModalViewController(mode: .add)
-        addAnnotationVC.delegate = self
-        let addAnnotationNC = UINavigationController.init(rootViewController: addAnnotationVC)
-        addAnnotationNC.modalTransitionStyle = .coverVertical
-        addAnnotationNC.modalPresentationStyle = .formSheet
-        addAnnotationNC.preferredContentSize = CGSize.init(width: 500, height: 500)
-        self.present(addAnnotationNC, animated: true, completion: nil)
-    }
+//    @objc func addAnnotation() {
+//        let addAnnotationVC = TagModalViewController(mode: .add)
+//        addAnnotationVC.delegate = self
+//        let addAnnotationNC = UINavigationController.init(rootViewController: addAnnotationVC)
+//        addAnnotationNC.modalTransitionStyle = .coverVertical
+//        addAnnotationNC.modalPresentationStyle = .formSheet
+//        addAnnotationNC.preferredContentSize = CGSize.init(width: 500, height: 500)
+//        self.present(addAnnotationNC, animated: true, completion: nil)
+//    }
     
     func addAnnotationIn(tapPosition: CGPoint) {
         let addAnnotationVC = TagModalViewController(mode: .add)
         addAnnotationVC.delegate = self
         addAnnotationVC.tag.position = tapPosition
-        addAnnotationVC.tag.isTappedPosition = true
+//        addAnnotationVC.tag.isTappedPosition = true
         let addAnnotationNC = UINavigationController.init(rootViewController: addAnnotationVC)
         addAnnotationNC.modalTransitionStyle = .coverVertical
         addAnnotationNC.modalPresentationStyle = .formSheet
@@ -170,15 +170,15 @@ extension TagViewController: TagDelegate {
     
     func addTag(tag: Tag) {
         let size = tag.getSize()
-        let point = tag.getPoint()
-        let textAnnotation = PDFAnnotation.init(bounds: CGRect.init(x: point.x, y: point.y, width: size.width, height: size.height), forType: .freeText, withProperties: nil)
+//        let point = tag.getPoint()
+        let textAnnotation = PDFAnnotation.init(bounds: CGRect.init(x: tag.position.x, y: tag.position.y, width: size.width, height: size.height), forType: .freeText, withProperties: nil)
         textAnnotation.caption = UUID().uuidString
         textAnnotation.contents = tag.description
         textAnnotation.interiorColor = tag.color
         textAnnotation.color = tag.color
         textAnnotation.font = UIFont.systemFont(ofSize: 45)
         textAnnotation.border = PDFBorder.init()
-        textAnnotation.destination = PDFDestination.init(page: pdfPage, at: point)
+        textAnnotation.destination = PDFDestination.init(page: pdfPage, at: tag.position)
         
         pdfPage.addAnnotation(textAnnotation)
     }

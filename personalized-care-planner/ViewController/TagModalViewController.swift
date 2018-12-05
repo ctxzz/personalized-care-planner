@@ -17,7 +17,7 @@ struct Tag {
     var description: String
     var size: CGSize
     var position: CGPoint
-    var isTappedPosition: Bool
+//    var isTappedPosition: Bool
     
     init() {
         self.color = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.3)
@@ -25,7 +25,7 @@ struct Tag {
         self.description = ""
         self.size = CGSize.init(width: 0, height: 0)
         self.position = CGPoint.init(x: 0, y: 0)
-        self.isTappedPosition = false
+//        self.isTappedPosition = false
     }
     
     func getSize() -> CGSize {
@@ -45,32 +45,32 @@ struct Tag {
         }
     }
     
-    func getPoint() -> CGPoint {
-        if isTappedPosition { return position }
-        switch category {
-        case "personality":
-            let x = Int.random(in: 1 ... 1599)
-            let y = Int.random(in: 1100 ... 2200)
-            return CGPoint.init(x: x, y: y)
-        case "relation":
-            let x = Int.random(in: 1600 ... 3300)
-            let y = Int.random(in: 1100 ... 2200)
-            return CGPoint.init(x: x, y: y)
-        case "story":
-            let x = Int.random(in: 1 ... 1599)
-            let y = Int.random(in: 1 ... 1099)
-            return CGPoint.init(x: x, y: y)
-        case "goal":
-            let x = Int.random(in: 1600 ... 3300)
-            let y = Int.random(in: 1 ... 1099)
-            return CGPoint.init(x: x, y: y)
-        default:
-            return CGPoint.init(x: 10, y: 10)
-        }
-    }
+//    func getPoint() -> CGPoint {
+//        if isTappedPosition { return position }
+//        switch category {
+//        case "personality":
+//            let x = Int.random(in: 1 ... 1599)
+//            let y = Int.random(in: 1100 ... 2200)
+//            return CGPoint.init(x: x, y: y)
+//        case "relation":
+//            let x = Int.random(in: 1600 ... 3300)
+//            let y = Int.random(in: 1100 ... 2200)
+//            return CGPoint.init(x: x, y: y)
+//        case "story":
+//            let x = Int.random(in: 1 ... 1599)
+//            let y = Int.random(in: 1 ... 1099)
+//            return CGPoint.init(x: x, y: y)
+//        case "goal":
+//            let x = Int.random(in: 1600 ... 3300)
+//            let y = Int.random(in: 1 ... 1099)
+//            return CGPoint.init(x: x, y: y)
+//        default:
+//            return CGPoint.init(x: 10, y: 10)
+//        }
+//    }
     
     func getCategory() -> String {
-        if !isTappedPosition { return category }
+//        if !isTappedPosition { return category }
         let x = position.x
         let y = position.y
         
@@ -268,10 +268,11 @@ extension TagModalViewController: UITableViewDelegate, UITableViewDataSource, Te
 
         switch selectedItem {
         case items[0][0]:
-            if tag.isTappedPosition { break } /// tap位置が指定されている場合はは変更できない
-            tagSubMVC.initializate(listType: .category)
-            tagSubMVC.delegate = self
-            self.navigationController?.pushViewController(tagSubMVC, animated: true)
+//            if tag.isTappedPosition { break } /// tap位置が指定されている場合はは変更できない
+//            tagSubMVC.initializate(listType: .category)
+//            tagSubMVC.delegate = self
+//            self.navigationController?.pushViewController(tagSubMVC, animated: true)
+            break
         case items[0][1]:
             tagSubMVC.initializate(listType: .color)
             tagSubMVC.delegate = self
