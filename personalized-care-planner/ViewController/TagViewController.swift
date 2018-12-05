@@ -30,7 +30,7 @@ class TagViewController: UIViewController {
         view.backgroundColor = .white
         
         do {
-            try DirectoryManager.copyTemplateToCacheDirectory()
+            try DirectoryManager.copyUserPDFToCacheDirectory(userId: "testid")
         } catch {
             print(error)
         }

@@ -14,6 +14,24 @@ class DirectoryManager {
         return path
     }
     
+    class func copyUserPDFToCacheDirectory(userId: String) throws {
+        guard let pdfPath = saveFileURL else {
+            do {
+                try copyTemplateToCacheDirectory()
+            } catch {
+                print(error)
+            }
+            return
+        }
+        guard let path = cacheFileURL else { return}
+        
+        do {
+            try FileManager.default.copyItem(at: pdfPath, to: path)
+        } catch {
+            print(error)
+        }
+    }
+    
     class func copyTemplateToCacheDirectory() throws {
         guard let pdfPath = getDefaultTemplatePath() else { return }
         guard let path = cacheFileURL else { return }
