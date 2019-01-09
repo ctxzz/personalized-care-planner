@@ -1,0 +1,29 @@
+digraph {
+    device[label="M_Device"];
+    group[label="M_Group"];
+    organazation[label="M_Organazation"];
+    person[label="M_Person"];
+    personType[label="C_PersonType"];
+    document[label="M_Document"];
+    documentType[label="C_DocumentType"];
+    template[label="M_Template"];
+    category[label="M_Category"];
+    annotation[label="M_Annotation"];
+
+    group -> organazation;
+    person -> personType;
+    document -> person;
+    document -> documentType;
+    template -> document;
+    template -> category;
+    annotation -> person;
+    annotation -> document;
+    annotation -> category
+
+    group_person[label="Group_Person"];
+    device_group[label="Device_Group"];
+    group_person -> group;
+    group_person -> person;
+    device_group -> device;
+    device_group -> group;
+}

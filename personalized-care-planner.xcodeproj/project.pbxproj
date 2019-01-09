@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0624D20521B7DF3A00C30083 /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0624D20421B7DF3A00C30083 /* self-sheet.pdf */; };
 		064873F9219BFEBC00B3E6B2 /* TagSubModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */; };
 		064873FB219C77A200B3E6B2 /* TextFieldViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873FA219C77A200B3E6B2 /* TextFieldViewCell.swift */; };
-		064873FD21A6E64800B3E6B2 /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 064873FC21A6E64600B3E6B2 /* self-sheet.pdf */; };
 		064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */; };
 		064C68F82199C8E2006AE88E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F02199C8E2006AE88E /* RootViewController.swift */; };
 		064C68F92199C8E2006AE88E /* PersonTableFABMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */; };
@@ -31,8 +31,8 @@
 		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
 		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
+		06DFFA0421E5D65B006D4B85 /* model-relation-v2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06DFFA0321E5D65B006D4B85 /* model-relation-v2.pdf */; };
 		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
-		06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E321774E8A00CCAA0B /* model-relation-v1.dot */; };
 		06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F321774EC600CCAA0B /* Realm.framework */; };
 		06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F421774EC600CCAA0B /* RealmSwift.framework */; };
 		06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F521774EC600CCAA0B /* SwiftyJSON.framework */; };
@@ -60,11 +60,11 @@
 
 /* Begin PBXFileReference section */
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		0624D20421B7DF3A00C30083 /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "self-sheet.pdf"; sourceTree = "<group>"; };
 		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSubModalViewController.swift; sourceTree = "<group>"; };
 		064873FA219C77A200B3E6B2 /* TextFieldViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewCell.swift; sourceTree = "<group>"; };
-		064873FC21A6E64600B3E6B2 /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "self-sheet.pdf"; sourceTree = "<group>"; };
 		064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitMasterViewController.swift; sourceTree = "<group>"; };
 		064C68F02199C8E2006AE88E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		064C68F12199C8E2006AE88E /* PersonTableFABMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableFABMenuViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
+		06DFFA0321E5D65B006D4B85 /* model-relation-v2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "model-relation-v2.pdf"; sourceTree = "<group>"; };
 		06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "model-relation-v1.pdf"; sourceTree = "<group>"; };
-		06F095E321774E8A00CCAA0B /* model-relation-v1.dot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "model-relation-v1.dot"; sourceTree = "<group>"; };
 		06F095EC21774EB800CCAA0B /* FontAwesomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F095ED21774EB800CCAA0B /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F095EE21774EB800CCAA0B /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,10 +144,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0645157F21821D1300860F83 /* Asset */ = {
+		0624D20321B7DF3A00C30083 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				064873FC21A6E64600B3E6B2 /* self-sheet.pdf */,
+				0624D20421B7DF3A00C30083 /* self-sheet.pdf */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -219,9 +219,9 @@
 		0682AD402162554200E21140 /* personalized-care-planner */ = {
 			isa = PBXGroup;
 			children = (
+				0624D20321B7DF3A00C30083 /* Asset */,
 				064C68EE2199C8E2006AE88E /* ViewController */,
 				064515882182E52E00860F83 /* WebView */,
-				0645157F21821D1300860F83 /* Asset */,
 				06F095E121774E8A00CCAA0B /* Model */,
 				06F095E421774E8A00CCAA0B /* View */,
 				0682AD412162554200E21140 /* AppDelegate.swift */,
@@ -253,8 +253,8 @@
 		06F095E121774E8A00CCAA0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06DFFA0321E5D65B006D4B85 /* model-relation-v2.pdf */,
 				06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */,
-				06F095E321774E8A00CCAA0B /* model-relation-v1.dot */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,10 +419,10 @@
 			files = (
 				06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */,
 				06AC34D5218B013600C2D7DC /* index.html in Resources */,
-				06F095E721774E8A00CCAA0B /* model-relation-v1.dot in Resources */,
+				06DFFA0421E5D65B006D4B85 /* model-relation-v2.pdf in Resources */,
+				0624D20521B7DF3A00C30083 /* self-sheet.pdf in Resources */,
 				0682AD492162554200E21140 /* Assets.xcassets in Resources */,
 				06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */,
-				064873FD21A6E64800B3E6B2 /* self-sheet.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
