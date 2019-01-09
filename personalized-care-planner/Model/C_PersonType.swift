@@ -1,5 +1,5 @@
 //
-//  C_UserType.swift
+//  C_PersonType.swift
 //  personalized-care-planner
 //
 //  Created by omata on 2019/01/09.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class UserType: Object {
+class PersonType: Object {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var type = ""
     @objc dynamic var createDate = NSDate()

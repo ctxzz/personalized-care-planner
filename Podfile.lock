@@ -1,5 +1,5 @@
 PODS:
-  - FontAwesome.swift (1.4.5)
+  - FontAwesome.swift (1.4.8)
   - Graph (2.2.2)
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
@@ -33,7 +33,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  FontAwesome.swift: a351dbb86b9fcec9aad6bce2fdd5b95e9a7b8828
+  FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
   Graph: 7bb540efc73635f727126db6236598aa472be086
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
