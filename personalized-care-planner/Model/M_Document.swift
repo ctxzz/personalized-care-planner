@@ -11,9 +11,11 @@ import RealmSwift
 
 class Document: Object {
     @objc dynamic var id = UUID().uuidString
-    @objc dynamic var name = ""
+    @objc dynamic var filename = ""
     @objc dynamic var documentType: DocumentType!
     @objc dynamic var person: Person!
+    @objc dynamic var localPath = ""
+    @objc dynamic var remoteURL = ""
     @objc dynamic var createDate = NSDate()
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
@@ -22,10 +24,12 @@ class Document: Object {
         return "id"
     }
     
-    convenience init(name: String, documentType: DocumentType, person: Person) {
+    convenience init(filename: String, documentType: DocumentType, person: Person, localPath: String, remoteURL: String) {
         self.init()
-        self.name = name
+        self.filename = filename
         self.documentType = documentType
         self.person = person
+        self.localPath = localPath
+        self.remoteURL = remoteURL
     }
 }
