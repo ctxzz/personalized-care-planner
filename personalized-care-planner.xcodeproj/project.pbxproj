@@ -44,6 +44,7 @@
 		06DFFA1C21E62A35006D4B85 /* M_Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA1B21E62A35006D4B85 /* M_Annotation.swift */; };
 		06DFFA1E21E62C51006D4B85 /* M_Device_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA1D21E62C51006D4B85 /* M_Device_Group.swift */; };
 		06DFFA2021E62CAF006D4B85 /* M_Group_Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA1F21E62CAF006D4B85 /* M_Group_Person.swift */; };
+		06DFFA2221E723D4006D4B85 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA2121E723D4006D4B85 /* RealmManager.swift */; };
 		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
 		06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F321774EC600CCAA0B /* Realm.framework */; };
 		06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F421774EC600CCAA0B /* RealmSwift.framework */; };
@@ -115,6 +116,7 @@
 		06DFFA1B21E62A35006D4B85 /* M_Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Annotation.swift; sourceTree = "<group>"; };
 		06DFFA1D21E62C51006D4B85 /* M_Device_Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Device_Group.swift; sourceTree = "<group>"; };
 		06DFFA1F21E62CAF006D4B85 /* M_Group_Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Group_Person.swift; sourceTree = "<group>"; };
+		06DFFA2121E723D4006D4B85 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "model-relation-v1.pdf"; sourceTree = "<group>"; };
 		06F095EC21774EB800CCAA0B /* FontAwesomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F095ED21774EB800CCAA0B /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,15 +245,16 @@
 		0682AD402162554200E21140 /* personalized-care-planner */ = {
 			isa = PBXGroup;
 			children = (
+				064515882182E52E00860F83 /* WebView */,
 				0624D20321B7DF3A00C30083 /* Asset */,
 				064C68EE2199C8E2006AE88E /* ViewController */,
-				064515882182E52E00860F83 /* WebView */,
 				06F095E121774E8A00CCAA0B /* Model */,
 				06F095E421774E8A00CCAA0B /* View */,
 				0682AD412162554200E21140 /* AppDelegate.swift */,
 				0682AD482162554200E21140 /* Assets.xcassets */,
 				0682AD4D2162554200E21140 /* Info.plist */,
 				066D40FE21B65FEF0070AEA1 /* DirectoryManager.swift */,
+				06DFFA2121E723D4006D4B85 /* RealmManager.swift */,
 			);
 			path = "personalized-care-planner";
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				06B35E1E217A265300641545 /* PersonTableView.swift in Sources */,
 				064C68FA2199C8E2006AE88E /* TagViewController.swift in Sources */,
 				064C68FE2199C8E2006AE88E /* TabBarGraphViewController.swift in Sources */,
+				06DFFA2221E723D4006D4B85 /* RealmManager.swift in Sources */,
 				06DFFA1C21E62A35006D4B85 /* M_Annotation.swift in Sources */,
 				064C68F82199C8E2006AE88E /* RootViewController.swift in Sources */,
 				06DFFA0E21E618CA006D4B85 /* M_Group.swift in Sources */,
