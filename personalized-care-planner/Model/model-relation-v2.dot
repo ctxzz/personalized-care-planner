@@ -22,8 +22,12 @@ digraph {
 
     group_person[label="Group_Person"];
     device_group[label="Device_Group"];
+    device_document[label="Device_Document"];
     group_person -> group;
     group_person -> person;
     device_group -> device;
     device_group -> group;
+    device_document -> device;
+    device_document -> document;
 }
+
