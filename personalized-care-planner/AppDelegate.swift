@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             try DirectoryManager.createCacheDirectoryIfNeed()
+            try DirectoryManager.createTemplatesDirectoryIfNeed()
+            DirectoryManager.setDefaultDocumentToTemplates()
         } catch {
             print(error)
         }

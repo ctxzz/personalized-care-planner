@@ -12,6 +12,7 @@ import PDFKit
 
 class TabBarPDFViewController: UIViewController {
     var pdfView: PDFView!
+    var userId = "testUser"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,19 @@ class TabBarPDFViewController: UIViewController {
     }
     
     func getDocument() -> PDFDocument? {
-        guard let path = Bundle.main.path(forResource: "self-sheet", ofType: "pdf") else {
+        do {
+            try DirectoryManager.createTemplateDirectoryIfNeed(templateName: "Personality")
+        } catch {
+            print(error)
+            return nil
+        }
+        
+        guard let path = DirectoryManager.getSaveFileURL(template: "Personality", fileId: userId) else {
             print("failed to get path.")
             return nil
         }
         
-        let pdfURL = URL.init(fileURLWithPath: path)
-        let document = PDFDocument.init(url: pdfURL)
+        let document = PDFDocument.init(url: path)
         
         return document
     }

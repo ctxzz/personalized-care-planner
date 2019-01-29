@@ -23,6 +23,9 @@ class TagViewController: UIViewController {
     var pdfPage: PDFPage!
     var gestureView: UIView!
     var editingAnnotation: PDFAnnotation?
+    
+    var targetPersonName = "personality-template" // get this variable when this page is called
+    var userId = "testUser"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,7 @@ class TagViewController: UIViewController {
         view.backgroundColor = .white
         
         do {
-            try DirectoryManager.copyUserPDFToCacheDirectory(userId: "testid")
+            try DirectoryManager.copyUserPDFToCacheDirectory(template: "Personality", fileId: userId)
         } catch {
             print(error)
         }
@@ -45,14 +48,15 @@ class TagViewController: UIViewController {
     }
     
     func getDocument() -> PDFDocument? {
-//        guard let path = Bundle.main.path(forResource: "self-sheet", ofType: "pdf") else {
+//        guard let path = Bundle.main.path(forResource: targetPersonName, ofType: "pdf") else {
 //            print("failed to get path.")
 //            return nil
 //        }
+//        let document = PDFDocument.init(url: URL.init(string: path)!)
         
         guard let pdfURL = DirectoryManager.cacheFileURL else { return nil }
         let document = PDFDocument.init(url: pdfURL)
-        
+
         return document
     }
 }
@@ -160,12 +164,11 @@ extension TagViewController: TagDelegate {
             
         }
         do {
-            try DirectoryManager.createSaveDirectoryIfNeed()
-            try DirectoryManager.createProfileDirectoryIfNeed(userId: "testid")
+            try DirectoryManager.createTemplateDirectoryIfNeed(templateName: "Personality")
         } catch {
             print(error)
         }
-        self.pdfPage.document?.write(to: DirectoryManager.saveFileURL!)
+        self.pdfPage.document?.write(to: DirectoryManager.getSaveFileURL(template: "Personality", fileId: userId)!)
     }
     
     func addTag(tag: Tag) {

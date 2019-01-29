@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0624D20521B7DF3A00C30083 /* self-sheet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0624D20421B7DF3A00C30083 /* self-sheet.pdf */; };
+		062AB94E22005A4E00A7196F /* Personality.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 062AB94D22005A4E00A7196F /* Personality.pdf */; };
 		064873F9219BFEBC00B3E6B2 /* TagSubModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */; };
 		064873FB219C77A200B3E6B2 /* TextFieldViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064873FA219C77A200B3E6B2 /* TextFieldViewCell.swift */; };
 		064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C68EF2199C8E2006AE88E /* SplitMasterViewController.swift */; };
@@ -31,7 +31,6 @@
 		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
 		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
-		06DFFA0421E5D65B006D4B85 /* model-relation-v2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06DFFA0321E5D65B006D4B85 /* model-relation-v2.pdf */; };
 		06DFFA0821E5FF70006D4B85 /* C_DocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA0721E5FF70006D4B85 /* C_DocumentType.swift */; };
 		06DFFA0A21E5FFC3006D4B85 /* M_Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA0921E5FFC3006D4B85 /* M_Category.swift */; };
 		06DFFA0C21E617E1006D4B85 /* M_Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA0B21E617E1006D4B85 /* M_Device.swift */; };
@@ -45,7 +44,6 @@
 		06DFFA1E21E62C51006D4B85 /* M_Device_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA1D21E62C51006D4B85 /* M_Device_Group.swift */; };
 		06DFFA2021E62CAF006D4B85 /* M_Group_Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA1F21E62CAF006D4B85 /* M_Group_Person.swift */; };
 		06DFFA2221E723D4006D4B85 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFFA2121E723D4006D4B85 /* RealmManager.swift */; };
-		06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06F095E221774E8A00CCAA0B /* model-relation-v1.pdf */; };
 		06F095F021774EC600CCAA0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F321774EC600CCAA0B /* Realm.framework */; };
 		06F095F121774EC600CCAA0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F421774EC600CCAA0B /* RealmSwift.framework */; };
 		06F095F221774EC600CCAA0B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F095F521774EC600CCAA0B /* SwiftyJSON.framework */; };
@@ -73,7 +71,7 @@
 
 /* Begin PBXFileReference section */
 		04494DDE0E824749B13C5874 /* Pods-personalized-care-plannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-personalized-care-plannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-personalized-care-plannerTests/Pods-personalized-care-plannerTests.release.xcconfig"; sourceTree = "<group>"; };
-		0624D20421B7DF3A00C30083 /* self-sheet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "self-sheet.pdf"; sourceTree = "<group>"; };
+		062AB94D22005A4E00A7196F /* Personality.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Personality.pdf; sourceTree = "<group>"; };
 		0645158B2182E56400860F83 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0645158E2182E75B00860F83 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSubModalViewController.swift; sourceTree = "<group>"; };
@@ -170,14 +168,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0624D20321B7DF3A00C30083 /* Asset */ = {
-			isa = PBXGroup;
-			children = (
-				0624D20421B7DF3A00C30083 /* self-sheet.pdf */,
-			);
-			path = Asset;
-			sourceTree = "<group>";
-		};
 		064515882182E52E00860F83 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +210,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0663693021F9B005002010C0 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				062AB94D22005A4E00A7196F /* Personality.pdf */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		0682AD352162554200E21140 = {
 			isa = PBXGroup;
 			children = (
@@ -245,8 +243,8 @@
 		0682AD402162554200E21140 /* personalized-care-planner */ = {
 			isa = PBXGroup;
 			children = (
+				0663693021F9B005002010C0 /* Asset */,
 				064515882182E52E00860F83 /* WebView */,
-				0624D20321B7DF3A00C30083 /* Asset */,
 				064C68EE2199C8E2006AE88E /* ViewController */,
 				06F095E121774E8A00CCAA0B /* Model */,
 				06F095E421774E8A00CCAA0B /* View */,
@@ -458,10 +456,8 @@
 			files = (
 				06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */,
 				06AC34D5218B013600C2D7DC /* index.html in Resources */,
-				06DFFA0421E5D65B006D4B85 /* model-relation-v2.pdf in Resources */,
-				0624D20521B7DF3A00C30083 /* self-sheet.pdf in Resources */,
 				0682AD492162554200E21140 /* Assets.xcassets in Resources */,
-				06F095E621774E8A00CCAA0B /* model-relation-v1.pdf in Resources */,
+				062AB94E22005A4E00A7196F /* Personality.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

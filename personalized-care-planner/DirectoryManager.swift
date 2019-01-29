@@ -6,24 +6,100 @@
 //  Copyright © 2018 Kirilab. All rights reserved.
 //
 
+
+/// Directory hierarchy
+///  /Documents
+///   | /Templates
+///   | /cache
+///   | /Personality
+///   |  a.pdf
+///   |  b.pdf
+///   |  ...
+///   | /template2
+///   | /template3
+///   |  ...
+///
+
+
 import Foundation
 
 class DirectoryManager {
-    class func getDefaultTemplatePath() -> String? {
-        guard let path = Bundle.main.path(forResource: "self-sheet", ofType: "pdf") else { return nil }
-        return path
+    /////////////
+    ///// Templates
+    /////////////
+    
+    class func setDefaultDocumentToTemplates() {
+        guard let path = Bundle.main.path(forResource: "Personality", ofType: "pdf") else { return }
+        let from = URL(fileURLWithPath: path)
+        guard var to = templatesDirectoryURL else { return }
+        to = to.appendingPathComponent(from.lastPathComponent)
+        
+        do {
+            try FileManager.default.copyItem(at: from, to: to)
+        } catch {
+            print(error)
+        }
     }
     
-    class func copyUserPDFToCacheDirectory(userId: String) throws {
-        guard let pdfPath = saveFileURL else {
+    class var templatesDirectoryURL: URL? {
+        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+            return nil
+        }
+        return URL(fileURLWithPath: path).appendingPathComponent("Templates")
+    }
+    
+    /////  create /Templates
+    class func createTemplatesDirectoryIfNeed() throws {
+        guard let templatesDirectoryURL = templatesDirectoryURL else { return }
+        let fileManager = FileManager.default
+        guard !fileManager.fileExists(atPath: templatesDirectoryURL.path) else { return }
+        
+        try fileManager.createDirectory(at: templatesDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+    }
+    
+    /////  get /Templates/[template].pdf
+    class func getTemplateFileURL(templateName: String) -> URL? {
+        guard let templatesDirectoryURL = templatesDirectoryURL else { return nil }
+        return templatesDirectoryURL.appendingPathComponent(templateName + ".pdf")
+    }
+
+    /////  get /Personlaity, etc...
+    class func getTemplateDirectoryURL(templateName: String) -> URL? {
+        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+            return nil
+        }
+        return URL(fileURLWithPath: path).appendingPathComponent(templateName)
+    }
+    
+    ////  create /Personlaity, etc...
+    class func createTemplateDirectoryIfNeed(templateName: String) throws {
+        guard let templateDirectoryURL = getTemplateDirectoryURL(templateName: templateName) else { return }
+        let fileManager = FileManager.default
+        guard !fileManager.fileExists(atPath: templateDirectoryURL.path) else { return }
+        
+        try fileManager.createDirectory(at: templateDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+    }
+
+    class func copyTemplateToCacheDirectory(templateName: String) throws {
+        guard let templatePath = getTemplateFileURL(templateName: templateName) else { return }
+        guard let cachePath = cacheFileURL else { return }
+        do {
+            try FileManager.default.copyItem(at: templatePath, to: cachePath)
+        } catch {
+            print(error)
+        }
+    }
+    
+    class func copyUserPDFToCacheDirectory(template: String, fileId: String) throws {
+        guard let pdfPath = getUserFileURL(template: template, fileId: fileId) else {
             do {
-                try copyTemplateToCacheDirectory()
+                try copyTemplateToCacheDirectory(templateName: template)
             } catch {
                 print(error)
             }
             return
         }
-        guard let path = cacheFileURL else { return}
+        guard let path = cacheFileURL else { return }
         
         do {
             try FileManager.default.copyItem(at: pdfPath, to: path)
@@ -32,15 +108,16 @@ class DirectoryManager {
         }
     }
     
-    class func copyTemplateToCacheDirectory() throws {
-        guard let pdfPath = getDefaultTemplatePath() else { return }
-        guard let path = cacheFileURL else { return }
-        do {
-            try FileManager.default.copyItem(at: URL(fileURLWithPath: pdfPath), to: path)
-        } catch {
-            print(error)
+    class func getUserFileURL(template: String, fileId: String) -> URL? {
+        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return nil }
+        let userFileURL = URL(fileURLWithPath: path).appendingPathComponent(template).appendingPathComponent(fileId)
+        if !FileManager.default.fileExists(atPath: userFileURL.path) {
+            return nil
         }
+  
+        return userFileURL
     }
+
     
     /////////////
     ///// cache
@@ -77,9 +154,9 @@ class DirectoryManager {
     ///// save
     /////////////
     
-    class func copyToSaveDirectory() -> URL? {
+    class func copyToSaveDirectory(template: String, fileId: String) -> URL? {
         guard let fromPath = cacheFileURL else { return nil }
-        guard let toPath = saveFileURL else { return nil }
+        guard let toPath = getSaveFileURL(template: template, fileId: fileId) else { return nil }
         
         do {
             try FileManager.default.copyItem(at: fromPath, to: toPath)
@@ -89,41 +166,45 @@ class DirectoryManager {
         }
     }
     
-    class var saveDirectoryURL: URL? {
-        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
-            return nil
-        }
-        
-        return URL(fileURLWithPath: path).appendingPathComponent("Profile")
+    class func getSaveFileURL(template: String, fileId: String) -> URL? {
+        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return nil }
+        return URL(fileURLWithPath: path).appendingPathComponent(template).appendingPathComponent(fileId + ".pdf")
     }
     
-    class var saveFileURL: URL? {
-        guard let saveDirectoryURL = saveDirectoryURL else { return nil }
-        let userId = "testid"
-        let fileName = "self.pdf"
-        return saveDirectoryURL.appendingPathComponent(userId).appendingPathComponent(fileName)
-    }
+//    class var saveDirectoryURL: URL? {
+//        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+//            return nil
+//        }
+//
+//        return URL(fileURLWithPath: path).appendingPathComponent("Profile")
+//    }
+//
+//    class var saveFileURL: URL? {
+//        guard let saveDirectoryURL = saveDirectoryURL else { return nil }
+//        let userId = "testid.pdf"
+//        return saveDirectoryURL.appendingPathComponent(userId)
+//    }
     
-    class func createSaveDirectoryIfNeed() throws {
-        guard let saveDirectoryURL = saveDirectoryURL else { return }
-        let fileManager = FileManager.default
-        
-        guard !fileManager.fileExists(atPath: saveDirectoryURL.path) else {
-            return
-        }
-        
-        try fileManager.createDirectory(at: saveDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-    }
-    
-    class func createProfileDirectoryIfNeed(userId: String) throws {
-        guard let saveDirectoryURL = saveDirectoryURL else { return }
-        let profileDirectoryURL = saveDirectoryURL.appendingPathComponent(userId)
-        let fileManager = FileManager.default
-        
-        guard !fileManager.fileExists(atPath: profileDirectoryURL.path) else {
-            return
-        }
-        
-        try fileManager.createDirectory(at: profileDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-    }
+//    class func createSaveDirectoryIfNeed() throws {
+//        guard let saveDirectoryURL = saveDirectoryURL else { return }
+//        let fileManager = FileManager.default
+//
+//        guard !fileManager.fileExists(atPath: saveDirectoryURL.path) else {
+//            return
+//        }
+//
+//        try fileManager.createDirectory(at: saveDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+//    }
+//
+//    class func createProfileDirectoryIfNeed(userId: String) throws {
+//        guard let saveDirectoryURL = saveDirectoryURL else { return }
+//        let profileDirectoryURL = saveDirectoryURL.appendingPathComponent(userId)
+//        let fileManager = FileManager.default
+//
+//        guard !fileManager.fileExists(atPath: profileDirectoryURL.path) else {
+//            return
+//        }
+//
+//        try fileManager.createDirectory(at: profileDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+//    }
 }
