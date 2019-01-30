@@ -14,8 +14,8 @@ class Person: Object {
     @objc dynamic var lastName = ""
     @objc dynamic var firstName = ""
     @objc dynamic var fullName = ""
-    @objc dynamic var kanaFirstName = ""
     @objc dynamic var kanaLastName = ""
+    @objc dynamic var kanaFirstName = ""
     @objc dynamic var personType: PersonType!
     @objc dynamic var createDate = NSDate()
     @objc dynamic var updatedate = NSDate()
@@ -29,7 +29,7 @@ class Person: Object {
         self.init()
         self.lastName = last
         self.firstName = first
-        self.fullName = last + first
+        self.fullName = last + " " +  first
         self.personType = personType
     }
 }
