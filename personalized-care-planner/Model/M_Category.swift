@@ -16,6 +16,9 @@ class Category: Object {
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
     
+    let templates = LinkingObjects(fromType: Template.self, property: "category")
+    let annotations = LinkingObjects(fromType: Annotation.self, property: "category")
+    
     override static func primaryKey() -> String? {
         return "id"
     }

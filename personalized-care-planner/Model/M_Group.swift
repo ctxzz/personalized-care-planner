@@ -17,6 +17,9 @@ class Group: Object {
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
     
+    let group_persons = LinkingObjects(fromType: Group_Person.self, property: "group")
+    let device_groups = LinkingObjects(fromType: Device_Group.self, property: "group")
+    
     override static func primaryKey() -> String? {
         return "id"
     }

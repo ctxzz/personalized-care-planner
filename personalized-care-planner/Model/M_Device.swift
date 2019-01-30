@@ -17,6 +17,9 @@ class Device: Object {
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
     
+    let device_groups = LinkingObjects(fromType: Device_Group.self, property: "device")
+    let device_documents = LinkingObjects(fromType: Device_Document.self, property: "device")
+    
     override static func primaryKey() -> String? {
         return "id"
     }

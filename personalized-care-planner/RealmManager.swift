@@ -64,5 +64,44 @@ class RealmManager {
 //        }
 //    }
 
+    class func addRealm(object: Object) {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else {
+                return
+            }
+            try realm.write {
+                realm.add(object)
+            }
+        } catch let error {
+            print("error write realm: \(error)")
+        }
+    }
     
+    class func addRealm(objects: Object...) {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else {
+                return
+            }
+            try realm.write {
+                for object in objects {
+                    realm.add(object)
+                }
+            }
+        } catch let error {
+            print("error write realm: \(error)")
+        }
+    }
+    
+    class func deleteRealm(object: Object) {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else {
+                return
+            }
+            try realm.write {
+                realm.delete(object)
+            }
+        } catch let error {
+            print("error delete realm: \(error)")
+        }
+    }
 }

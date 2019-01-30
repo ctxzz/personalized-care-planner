@@ -16,6 +16,8 @@ class DocumentType: Object {
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
     
+    let documents = LinkingObjects(fromType: Document.self, property: "documentType")
+    
     override static func primaryKey() -> String? {
         return "id"
     }

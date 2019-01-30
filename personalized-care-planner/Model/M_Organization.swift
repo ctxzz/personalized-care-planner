@@ -16,6 +16,8 @@ class Organization: Object {
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
     
+    let groups = LinkingObjects(fromType: Group.self, property: "organization")
+    
     override static func primaryKey() -> String? {
         return "id"
     }

@@ -20,6 +20,10 @@ class Document: Object {
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
     
+    let device_documents = LinkingObjects(fromType: Device_Document.self, property: "document")
+    let annotations = LinkingObjects(fromType: Annotation.self, property: "document")
+    let templates = LinkingObjects(fromType: Template.self, property: "document")
+    
     override static func primaryKey() -> String? {
         return "id"
     }
