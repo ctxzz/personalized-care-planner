@@ -12,7 +12,7 @@ import RealmSwift
 class Document: Object {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var filename = ""
-    @objc dynamic var documentType: DocumentType!
+    @objc dynamic var template: Template!
     @objc dynamic var person: Person!
     @objc dynamic var localPath = ""
     @objc dynamic var remoteURL = ""
@@ -35,5 +35,13 @@ class Document: Object {
         self.person = person
         self.localPath = localPath
         self.remoteURL = remoteURL
+    }
+    
+    class func getDocument(id: String) -> Document? {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else { return nil }
+            let document = realm.objects(Document.self).filter("id == %@", id).first
+            return document
+        }
     }
 }

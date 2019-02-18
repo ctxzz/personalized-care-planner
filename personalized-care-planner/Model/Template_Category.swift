@@ -1,30 +1,30 @@
 //
-//  M_Category.swift
+//  Template_Category.swift
 //  personalized-care-planner
 //
-//  Created by omata on 2019/01/09.
+//  Created by omata on 2019/02/18.
 //  Copyright © 2019 Kirilab. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class Category: Object {
+class Template_Category: Object {
     @objc dynamic var id = UUID().uuidString
-    @objc dynamic var name = ""
+    @objc dynamic var template: Template!
+    @objc dynamic var category: Category!
     @objc dynamic var createDate = NSDate()
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
-    
-    let templates = LinkingObjects(fromType: Template.self, property: "category")
-    let annotations = LinkingObjects(fromType: Annotation.self, property: "category")
     
     override static func primaryKey() -> String? {
         return "id"
     }
     
-    convenience init(name: String) {
+    convenience init(template: Template, category: Category) {
         self.init()
-        self.name = name
+        self.template = template
+        self.category = category
     }
+
 }

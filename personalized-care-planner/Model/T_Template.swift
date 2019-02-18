@@ -1,5 +1,5 @@
 //
-//  C_DocumentType.swift
+//  M_Template.swift
 //  personalized-care-planner
 //
 //  Created by omata on 2019/01/09.
@@ -9,21 +9,19 @@
 import Foundation
 import RealmSwift
 
-class DocumentType: Object {
+class Template: Object {
     @objc dynamic var id = UUID().uuidString
-    @objc dynamic var type = ""
+    @objc dynamic var filename = ""
     @objc dynamic var createDate = NSDate()
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
-    
-    let documents = LinkingObjects(fromType: Document.self, property: "documentType")
     
     override static func primaryKey() -> String? {
         return "id"
     }
     
-    convenience init(type: String) {
+    convenience init(filename: String) {
         self.init()
-        self.type = type
+        self.filename = filename
     }
 }
