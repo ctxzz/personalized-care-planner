@@ -24,4 +24,12 @@ class Template: Object {
         self.init()
         self.filename = filename
     }
+    
+    class func getTemplate(id: String) -> Template? {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else { return nil }
+            let template = realm.objects(Template.self).filter("id == %@", id).first
+            return template
+        }
+    }
 }

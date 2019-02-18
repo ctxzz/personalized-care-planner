@@ -29,4 +29,11 @@ class Category: Object {
         self.name = name
         self.value = value
     }
+    
+    class func getCategory() -> Results<Category>? {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else { return nil }
+            return realm.objects(Category.self)
+        }
+    }
 }

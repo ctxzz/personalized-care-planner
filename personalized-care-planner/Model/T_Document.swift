@@ -28,10 +28,10 @@ class Document: Object {
         return "id"
     }
     
-    convenience init(filename: String, documentType: DocumentType, person: Person, localPath: String, remoteURL: String) {
+    convenience init(filename: String, template: Template, person: Person, localPath: String, remoteURL: String) {
         self.init()
         self.filename = filename
-        self.documentType = documentType
+        self.template = template
         self.person = person
         self.localPath = localPath
         self.remoteURL = remoteURL
