@@ -15,6 +15,7 @@ class PersonType: Object {
     @objc dynamic var createDate = NSDate()
     @objc dynamic var updatedate = NSDate()
     @objc dynamic var isDelete = false
+    
     let persons = LinkingObjects(fromType: Person.self, property: "personType")
     
     override static func primaryKey() -> String? {

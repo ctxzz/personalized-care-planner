@@ -34,8 +34,11 @@ class DirectoryManager {
         guard var to = templatesDirectoryURL else { return }
         to = to.appendingPathComponent(from.lastPathComponent)
         
+        let fileManager = FileManager.default
+        guard !fileManager.fileExists(atPath: to.path) else { return }
+        
         do {
-            try FileManager.default.copyItem(at: from, to: to)
+            try fileManager.copyItem(at: from, to: to)
         } catch {
             print(error)
         }

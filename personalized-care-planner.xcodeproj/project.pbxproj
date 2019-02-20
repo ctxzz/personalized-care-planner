@@ -30,6 +30,7 @@
 		0682D8A0217F54EA00A02AAF /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D89F217F54EA00A02AAF /* Graph.framework */; };
 		0682D8A221808C7A00A02AAF /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */; };
 		069095D8221AE954001E6382 /* Template_Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069095D7221AE954001E6382 /* Template_Category.swift */; };
+		069095DA221D80C6001E6382 /* PersonModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069095D9221D80C6001E6382 /* PersonModalViewController.swift */; };
 		06AC34D5218B013600C2D7DC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0645158B2182E56400860F83 /* index.html */; };
 		06AC34D6218B013B00C2D7DC /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 0645158E2182E75B00860F83 /* d3.min.js */; };
 		06B35E1E217A265300641545 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B35E1D217A265300641545 /* PersonTableView.swift */; };
@@ -103,6 +104,7 @@
 		0682D89F217F54EA00A02AAF /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682D8A121808C7A00A02AAF /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		069095D7221AE954001E6382 /* Template_Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template_Category.swift; sourceTree = "<group>"; };
+		069095D9221D80C6001E6382 /* PersonModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModalViewController.swift; sourceTree = "<group>"; };
 		06B35E1D217A265300641545 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		06DFFA0921E5FFC3006D4B85 /* T_Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T_Category.swift; sourceTree = "<group>"; };
 		06DFFA0B21E617E1006D4B85 /* M_Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Device.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				064C68F62199C8E2006AE88E /* TabBarGraphViewController.swift */,
 				064C68FF2199C9A0006AE88E /* TagModalViewController.swift */,
 				064873F8219BFEBC00B3E6B2 /* TagSubModalViewController.swift */,
+				069095D9221D80C6001E6382 /* PersonModalViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				06DFFA1A21E62369006D4B85 /* T_Template.swift in Sources */,
 				06DFFA0C21E617E1006D4B85 /* M_Device.swift in Sources */,
 				064C68F72199C8E2006AE88E /* SplitMasterViewController.swift in Sources */,
+				069095DA221D80C6001E6382 /* PersonModalViewController.swift in Sources */,
 				06DFFA0A21E5FFC3006D4B85 /* T_Category.swift in Sources */,
 				06DFFA1621E6218D006D4B85 /* C_PersonType.swift in Sources */,
 			);

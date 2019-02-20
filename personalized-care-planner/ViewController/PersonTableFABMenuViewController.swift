@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Material
 import Motion
+import FontAwesome_swift
 
 class PersonTableFABMenuViewController: FABMenuController {
     fileprivate let fabMenuSize = CGSize(width: 56, height: 56)
@@ -17,8 +18,9 @@ class PersonTableFABMenuViewController: FABMenuController {
     fileprivate let rightInset: CGFloat = 24
     
     fileprivate var fabButton: FABButton!
-    fileprivate var notesFABMenuItem: FABMenuItem!
-    fileprivate var remindersFABMenuItem: FABMenuItem!
+    fileprivate var fabButtonSize = CGSize(width: 25, height: 25)
+    fileprivate var templateFABMenuItem: FABMenuItem!
+    fileprivate var personFABMenuItem: FABMenuItem!
     
     var rightNavigationItems: [UIBarButtonItem]!
     var leftNavigationItems: [UIBarButtonItem]!
@@ -29,8 +31,8 @@ class PersonTableFABMenuViewController: FABMenuController {
         view.backgroundColor = .white
         prepareNavigationBar()
         prepareFABButton()
-        prepareNotesFABMenuItem()
-        prepareRemindersFABMenuItem()
+        prepareTemplateFABMenuItem()
+        preparePersonFABMenuItem()
         prepareFABMenu()
     }
 }
@@ -56,30 +58,30 @@ extension PersonTableFABMenuViewController {
         fabButton.pulseColor = .white
     }
     
-    fileprivate func prepareNotesFABMenuItem() {
-        notesFABMenuItem = FABMenuItem()
-        notesFABMenuItem.title = "Audio Library"
-        notesFABMenuItem.fabButton.image = Icon.cm.pen
-        notesFABMenuItem.fabButton.tintColor = .white
-        notesFABMenuItem.fabButton.pulseColor = .white
-        notesFABMenuItem.fabButton.backgroundColor = Color.green.base
-        notesFABMenuItem.fabButton.addTarget(self, action: #selector(handleNotesFABMenuItem(button:)), for: .touchUpInside)
+    fileprivate func prepareTemplateFABMenuItem() {
+        templateFABMenuItem = FABMenuItem()
+        templateFABMenuItem.title = "Add Template"
+        templateFABMenuItem.fabButton.image = UIImage.fontAwesomeIcon(name: .fileAlt, style: FontAwesomeStyle.solid, textColor: .white, size: fabButtonSize)
+        templateFABMenuItem.fabButton.tintColor = .white
+        templateFABMenuItem.fabButton.pulseColor = .white
+        templateFABMenuItem.fabButton.backgroundColor = Color.green.base
+        templateFABMenuItem.fabButton.addTarget(self, action: #selector(handleTemplateFABMenuItem(button:)), for: .touchUpInside)
     }
     
-    fileprivate func prepareRemindersFABMenuItem() {
-        remindersFABMenuItem = FABMenuItem()
-        remindersFABMenuItem.title = "Reminders"
-        remindersFABMenuItem.fabButton.image = Icon.cm.bell
-        remindersFABMenuItem.fabButton.tintColor = .white
-        remindersFABMenuItem.fabButton.pulseColor = .white
-        remindersFABMenuItem.fabButton.backgroundColor = Color.blue.base
-        remindersFABMenuItem.fabButton.addTarget(self, action: #selector(handleRemindersFABMenuItem(button:)), for: .touchUpInside)
+    fileprivate func preparePersonFABMenuItem() {
+        personFABMenuItem = FABMenuItem()
+        personFABMenuItem.title = "Add Person"
+        personFABMenuItem.fabButton.image = UIImage.fontAwesomeIcon(name: .userPlus, style: FontAwesomeStyle.solid, textColor: .white, size: fabButtonSize)
+        personFABMenuItem.fabButton.tintColor = .white
+        personFABMenuItem.fabButton.pulseColor = .white
+        personFABMenuItem.fabButton.backgroundColor = Color.blue.base
+        personFABMenuItem.fabButton.addTarget(self, action: #selector(handleRemindersFABMenuItem(button:)), for: .touchUpInside)
     }
     
     fileprivate func prepareFABMenu() {
         fabMenu.fabButton = fabButton
         fabMenu.shadowColor = .black
-        fabMenu.fabMenuItems = [notesFABMenuItem, remindersFABMenuItem]
+        fabMenu.fabMenuItems = [templateFABMenuItem, personFABMenuItem]
         
         view.layout(fabMenu)
             .size(fabMenuSize)
@@ -90,7 +92,7 @@ extension PersonTableFABMenuViewController {
 
 extension PersonTableFABMenuViewController {
     @objc
-    fileprivate func handleNotesFABMenuItem(button: UIButton) {
+    fileprivate func handleTemplateFABMenuItem(button: UIButton) {
         fabMenu.close()
         fabMenu.fabButton?.animate(.rotate(0))
     }
@@ -99,6 +101,14 @@ extension PersonTableFABMenuViewController {
     fileprivate func handleRemindersFABMenuItem(button: UIButton) {
         fabMenu.close()
         fabMenu.fabButton?.animate(.rotate(0))
+        
+        let personMVC = PersonModalViewController(mode: .add)
+        let addPersonNC = UINavigationController.init(rootViewController: personMVC)
+        addPersonNC.modalTransitionStyle = .coverVertical
+        addPersonNC.modalPresentationStyle = .formSheet
+        addPersonNC.preferredContentSize = CGSize.init(width: 500, height: 500)
+        self.present(addPersonNC, animated: true, completion: nil)
+
     }
 }
 

@@ -16,6 +16,7 @@ class Person: Object {
     @objc dynamic var fullName = ""
     @objc dynamic var kanaLastName = ""
     @objc dynamic var kanaFirstName = ""
+    @objc dynamic var sex = 0
     @objc dynamic var personType: PersonType!
     @objc dynamic var createDate = NSDate()
     @objc dynamic var updatedate = NSDate()
@@ -30,11 +31,12 @@ class Person: Object {
         return "id"
     }
     
-    convenience init(last: String, first: String, personType: PersonType) {
+    convenience init(last: String, first: String, sex: Int, personType: PersonType) {
         self.init()
         self.lastName = last
         self.firstName = first
         self.fullName = last + " " +  first
+        self.sex = sex
         self.personType = personType
     }
     
