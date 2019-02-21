@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(error)
         }
         
+        RealmManager.openRealm()
+        
         return true
     }
     

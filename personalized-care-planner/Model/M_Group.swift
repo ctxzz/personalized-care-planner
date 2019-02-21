@@ -29,4 +29,11 @@ class Group: Object {
         self.name = name
         self.organization = organization
     }
+    
+    class func getAllGroups() -> Results<Group>? {
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else { return nil }
+            return realm.objects(Group.self)
+        }
+    }
 }

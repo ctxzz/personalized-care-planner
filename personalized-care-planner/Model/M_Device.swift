@@ -29,4 +29,16 @@ class Device: Object {
         self.name = name
         self.deviceIdentifier = deviceIdentifier
     }
+    
+    class func getDevice() -> Device? {
+        let deviceName = UIDevice.current.name
+        do {
+            guard let realm = RealmManager.sharedInstance.localRealm else {
+                return nil
+            }
+            
+            let device = realm.objects(Device.self).filter("name == %@ AND isDelete == false", deviceName).first
+            return device
+        }
+    }
 }

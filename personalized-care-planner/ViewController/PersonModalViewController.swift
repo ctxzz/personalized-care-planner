@@ -76,7 +76,7 @@ extension PersonModalViewController {
     }
     
     internal func prepareTableView() {
-        tableView = UITableView.init(frame: self.navigationController!.view.frame, style: .plain)
+        tableView = UITableView.init(frame: self.navigationController!.view.frame, style: .grouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.register(TextFieldViewCell.self, forCellReuseIdentifier: "TextFieldCell")
         tableView.dataSource = self
@@ -150,9 +150,9 @@ extension PersonModalViewController: UITableViewDelegate, UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 4 {
-//            let modalPersonalGroupEditTableVC = ModalPersonGroupEditTableViewController()
-//            modalPersonalGroupEditTableVC.delegate = self
-//            self.navigationController?.pushViewController(modalPersonalGroupEditTableVC, animated: true)
+            let groupTableVC = GroupTableViewController()
+            groupTableVC.delegate = self
+            self.navigationController?.pushViewController(groupTableVC, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -168,5 +168,11 @@ extension PersonModalViewController: UITableViewDelegate, UITableViewDataSource,
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items[section].count
     }
-    
+}
+
+extension PersonModalViewController: GroupSelectDelegate {
+    func onSelected(group: String) {
+        self.tableView.visibleCells[4].textLabel?.text = group
+        self.updateGroup = group
+    }
 }

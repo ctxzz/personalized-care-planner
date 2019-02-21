@@ -10,8 +10,8 @@ import Foundation
 import RealmSwift
 
 enum RealmManagerError: Error {
-    case canntOpenLocalRealm
-    case canntOpenSyncRealm
+    case cantOpenLocalRealm
+    case cantOpenSyncRealm
     case notExistDefaultData
 }
 
@@ -24,7 +24,7 @@ class RealmManager {
         return Bundle.main.url(forResource: name, withExtension: "realm")
     }
     
-    func openRealm() {
+    class func openRealm() {
         // todo: check remote realm
         do {
             try RealmManager.sharedInstance.openLocalRealm()
@@ -33,10 +33,16 @@ class RealmManager {
         }
         
         // if dont has initial data
+        
+        if Device.getDevice() == nil {
+            addDefaultData()
+            print("Realm: Add default data")
+        }
+        
         copyInitialRealmData()
     }
     
-    func copyInitialRealmData() {
+    class func copyInitialRealmData() {
         //        let defaultURL = Realm.Configuration.defaultConfiguration.fileURL!
         //        if let v0URL = bundleURL(name: "default-v0") {
         //            do {
@@ -52,7 +58,7 @@ class RealmManager {
         do {
             self.localRealm = try Realm()
         } catch {
-            throw RealmManagerError.canntOpenLocalRealm
+            throw RealmManagerError.cantOpenLocalRealm
         }
     }
     
@@ -64,6 +70,21 @@ class RealmManager {
 //        }
 //    }
 
+    class func addDefaultData() {
+        let device = Device.init(name: UIDevice.current.name, deviceIdentifier: "")
+        RealmManager.addRealm(object: device)
+        
+        let organization = Organization.init(name: "test")
+        RealmManager.addRealm(object: organization)
+        
+        for i in 1..<4 {
+            let group = Group.init(name: "group" + String(i), organization: organization)
+            RealmManager.addRealm(object: group)
+        }
+    }
+    
+
+    
     class func addRealm(object: Object) {
         do {
             guard let realm = RealmManager.sharedInstance.localRealm else {
